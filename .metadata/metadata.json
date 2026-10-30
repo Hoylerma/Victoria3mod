@@ -1,0 +1,13 @@
+{
+  "name" : "Der Berater – Live-Ratschläge",
+  "id" : "hoylerma.berater",
+  "version" : "0.1.0",
+  "supported_game_version" : "",
+  "short_description" : "Ein Berater analysiert dein Land laufend und gibt dir live Ratschläge: Warnungen in der Warnleiste, ein Journal mit allen Befunden, Krisen-Popups und ein Jahresbericht.",
+  "tags" : [ "Gameplay", "Utilities" ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  },
+  "picture" : "thumbnail.png"
+}

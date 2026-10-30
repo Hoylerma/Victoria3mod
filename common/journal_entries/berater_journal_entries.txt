@@ -1,0 +1,141 @@
+﻿# Erzeugt von werkzeuge/erzeuge_mod.py – nicht von Hand ändern.
+
+# Das Journal des Beraters: wird für jeden Spieler automatisch aktiv und zeigt live alle Befunde.
+je_berater = {
+	group = je_group_berater
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	is_shown_when_inactive = {
+		is_player = yes
+	}
+	possible = {
+		is_player = yes
+	}
+	invalid = {
+		is_player = no
+	}
+
+	transferable = yes
+	weight = 1
+	should_update_on_player_command = yes
+
+	status_desc = {
+		desc = je_berater_status_kopf
+		triggered_desc = {
+			desc = je_berater_status_bankrott
+			trigger = { berater_problem_bankrott = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_schulden_kritisch
+			trigger = { berater_problem_schulden_kritisch = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_revolution
+			trigger = { berater_problem_revolution = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_kriegsunterstuetzung
+			trigger = { berater_problem_kriegsunterstuetzung = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_infamie_paria
+			trigger = { berater_problem_infamie_paria = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_schulden_hoch
+			trigger = { berater_problem_schulden_hoch = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_defizit
+			trigger = { berater_problem_defizit = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_buerokratie
+			trigger = { berater_problem_buerokratie = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_autoritaet
+			trigger = { berater_problem_autoritaet = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_einfluss
+			trigger = { berater_problem_einfluss = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_unruhe
+			trigger = { berater_problem_unruhe = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_radikale
+			trigger = { berater_problem_radikale = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_ig_wuetend
+			trigger = { berater_problem_ig_wuetend = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_arbeitslosigkeit
+			trigger = { berater_problem_arbeitslosigkeit = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_lebensstandard
+			trigger = { berater_problem_lebensstandard = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_engpaesse
+			trigger = { berater_problem_engpaesse = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_infamie_hoch
+			trigger = { berater_problem_infamie_hoch = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_abspaltung
+			trigger = { berater_problem_abspaltung = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_legitimitaet
+			trigger = { berater_problem_legitimitaet = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_forschung
+			trigger = { berater_problem_forschung = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_bau_leer
+			trigger = { berater_problem_bau_leer = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_bau_lang
+			trigger = { berater_problem_bau_lang = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_gold_ungenutzt
+			trigger = { berater_problem_gold_ungenutzt = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_steuern_hoch
+			trigger = { berater_problem_steuern_hoch = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_alphabetisierung
+			trigger = { berater_problem_alphabetisierung = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_industriegueter_teuer
+			trigger = { berater_problem_industriegueter_teuer = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_gesetze
+			trigger = { berater_problem_gesetze = yes }
+		}
+		triggered_desc = {
+			desc = je_berater_status_alles_gut
+			trigger = { berater_hat_problem = no }
+		}
+	}
+
+	scripted_button = berater_knopf_bericht
+	scripted_button = berater_knopf_jahresbericht
+	scripted_button = berater_knopf_krisen
+}

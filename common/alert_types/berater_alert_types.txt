@@ -1,0 +1,218 @@
+﻿# Erzeugt von werkzeuge/erzeuge_mod.py – nicht von Hand ändern.
+
+# Live-Warnungen in der Warnleiste. Jede lässt sich in den Warnungseinstellungen des Spiels einzeln abschalten.
+
+berater_bankrott = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_kritisch.dds"
+	type = alert
+	color = red
+	valid = {
+		berater_problem_bankrott = yes
+	}
+}
+
+berater_schulden_kritisch = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_kritisch.dds"
+	type = alert
+	color = red
+	valid = {
+		berater_problem_schulden_kritisch = yes
+	}
+}
+
+berater_revolution = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_kritisch.dds"
+	type = alert
+	color = red
+	valid = {
+		berater_problem_revolution = yes
+	}
+}
+
+berater_kriegsunterstuetzung = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_kritisch.dds"
+	type = alert
+	color = red
+	valid = {
+		berater_problem_kriegsunterstuetzung = yes
+	}
+}
+
+berater_infamie_paria = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_kritisch.dds"
+	type = alert
+	color = red
+	valid = {
+		berater_problem_infamie_paria = yes
+	}
+}
+
+berater_schulden_hoch = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_warnung.dds"
+	type = alert
+	color = yellow
+	valid = {
+		berater_problem_schulden_hoch = yes
+	}
+}
+
+berater_defizit = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_warnung.dds"
+	type = alert
+	color = yellow
+	valid = {
+		berater_problem_defizit = yes
+	}
+}
+
+berater_unruhe = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_warnung.dds"
+	type = alert
+	color = yellow
+	valid = {
+		berater_problem_unruhe = yes
+	}
+}
+
+berater_radikale = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_warnung.dds"
+	type = alert
+	color = yellow
+	valid = {
+		berater_problem_radikale = yes
+	}
+}
+
+berater_ig_wuetend = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_warnung.dds"
+	type = alert
+	color = yellow
+	valid = {
+		berater_problem_ig_wuetend = yes
+	}
+}
+
+berater_arbeitslosigkeit = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_warnung.dds"
+	type = alert
+	color = yellow
+	valid = {
+		berater_problem_arbeitslosigkeit = yes
+	}
+}
+
+berater_lebensstandard = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_warnung.dds"
+	type = alert
+	color = yellow
+	valid = {
+		berater_problem_lebensstandard = yes
+	}
+}
+
+berater_engpaesse = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_warnung.dds"
+	type = alert
+	color = yellow
+	valid = {
+		berater_problem_engpaesse = yes
+	}
+}
+
+berater_infamie_hoch = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_warnung.dds"
+	type = alert
+	color = yellow
+	valid = {
+		berater_problem_infamie_hoch = yes
+	}
+}
+
+berater_abspaltung = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_warnung.dds"
+	type = alert
+	color = yellow
+	valid = {
+		berater_problem_abspaltung = yes
+	}
+}
+
+berater_legitimitaet = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_warnung.dds"
+	type = alert
+	color = yellow
+	valid = {
+		berater_problem_legitimitaet = yes
+	}
+}
+
+berater_bau_lang = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_tipp.dds"
+	type = important_action
+	alert_group = berater_tipps
+	color = green
+	valid = {
+		berater_problem_bau_lang = yes
+	}
+}
+
+berater_gold_ungenutzt = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_tipp.dds"
+	type = important_action
+	alert_group = berater_tipps
+	color = green
+	valid = {
+		berater_problem_gold_ungenutzt = yes
+	}
+}
+
+berater_steuern_hoch = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_tipp.dds"
+	type = important_action
+	alert_group = berater_tipps
+	color = green
+	valid = {
+		berater_problem_steuern_hoch = yes
+	}
+}
+
+berater_alphabetisierung = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_tipp.dds"
+	type = important_action
+	alert_group = berater_tipps
+	color = green
+	valid = {
+		berater_problem_alphabetisierung = yes
+	}
+}
+
+berater_industriegueter_teuer = {
+	script_context = player_country
+	texture = "gfx/interface/icons/berater/berater_tipp.dds"
+	type = important_action
+	alert_group = berater_tipps
+	color = green
+	valid = {
+		berater_problem_industriegueter_teuer = yes
+	}
+}

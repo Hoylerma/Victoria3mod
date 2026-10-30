@@ -1,0 +1,232 @@
+﻿# Erzeugt von werkzeuge/erzeuge_mod.py – nicht von Hand ändern.
+
+# Jede Prüfung des Beraters als eigener Trigger im Länder-Scope: berater_problem_<schluessel> = yes
+
+berater_problem_bankrott = {
+	in_default = yes
+}
+
+berater_problem_schulden_kritisch = {
+	in_default = no
+	scaled_debt >= 0.8
+}
+
+berater_problem_revolution = {
+	any_political_movement = {
+		is_revolutionary = yes
+	}
+}
+
+berater_problem_kriegsunterstuetzung = {
+	any_scope_war = {
+		has_war_support = {
+			target = root
+			value < 0
+		}
+	}
+}
+
+berater_problem_infamie_paria = {
+	infamy >= infamy_threshold:pariah
+}
+
+berater_problem_schulden_hoch = {
+	in_default = no
+	scaled_debt >= 0.5
+	scaled_debt < 0.8
+}
+
+berater_problem_defizit = {
+	in_default = no
+	berater_wochenbilanz < 0
+	scaled_gold_reserves < 0.25
+}
+
+berater_problem_buerokratie = {
+	bureaucracy < 0
+}
+
+berater_problem_autoritaet = {
+	authority < 0
+}
+
+berater_problem_einfluss = {
+	influence < 0
+}
+
+berater_problem_unruhe = {
+	any_scope_state = {
+		is_incorporated = yes
+		state_population >= 100000
+		turmoil >= 0.25
+	}
+}
+
+berater_problem_radikale = {
+	radical_fraction = {
+		value >= 0.2
+	}
+}
+
+berater_problem_ig_wuetend = {
+	any_interest_group = {
+		is_powerful = yes
+		ig_approval <= -10
+	}
+}
+
+berater_problem_arbeitslosigkeit = {
+	any_scope_state = {
+		is_incorporated = yes
+		state_population >= 250000
+		state_unemployment_rate > 0.15
+	}
+}
+
+berater_problem_lebensstandard = {
+	berater_anteil_unter_erwartung >= 0.3
+}
+
+berater_problem_engpaesse = {
+	market = {
+		market_number_goods_shortages >= 1
+	}
+}
+
+berater_problem_infamie_hoch = {
+	infamy >= infamy_threshold:notorious
+	infamy < infamy_threshold:pariah
+}
+
+berater_problem_abspaltung = {
+	has_any_secessionists_growing = yes
+}
+
+berater_problem_legitimitaet = {
+	legitimacy < 25
+}
+
+berater_problem_forschung = {
+	NOT = { is_researching_technology = any }
+}
+
+berater_problem_bau_leer = {
+	in_default = no
+	scaled_debt < 0.6
+	construction_queue_num_queued_government_levels < 1
+}
+
+berater_problem_bau_lang = {
+	construction_queue_government_duration > 104
+}
+
+berater_problem_gold_ungenutzt = {
+	is_at_war = no
+	scaled_gold_reserves >= 0.9
+}
+
+berater_problem_steuern_hoch = {
+	tax_level >= high
+	scaled_debt < 0.1
+	scaled_gold_reserves >= 0.5
+}
+
+berater_problem_alphabetisierung = {
+	literacy_rate < 0.25
+	NOT = { has_law = law_type:law_public_schools }
+}
+
+berater_problem_industriegueter_teuer = {
+	market = {
+		OR = {
+			mg:coal = { market_goods_pricier >= 0.25 }
+			mg:iron = { market_goods_pricier >= 0.25 }
+			mg:wood = { market_goods_pricier >= 0.25 }
+			mg:tools = { market_goods_pricier >= 0.25 }
+			mg:steel = { market_goods_pricier >= 0.25 }
+		}
+	}
+}
+
+berater_problem_gesetze = {
+	is_at_war = no
+	enacting_any_law = no
+}
+
+# Irgendein Befund liegt vor
+berater_hat_problem = {
+	OR = {
+		berater_problem_bankrott = yes
+		berater_problem_schulden_kritisch = yes
+		berater_problem_revolution = yes
+		berater_problem_kriegsunterstuetzung = yes
+		berater_problem_infamie_paria = yes
+		berater_problem_schulden_hoch = yes
+		berater_problem_defizit = yes
+		berater_problem_buerokratie = yes
+		berater_problem_autoritaet = yes
+		berater_problem_einfluss = yes
+		berater_problem_unruhe = yes
+		berater_problem_radikale = yes
+		berater_problem_ig_wuetend = yes
+		berater_problem_arbeitslosigkeit = yes
+		berater_problem_lebensstandard = yes
+		berater_problem_engpaesse = yes
+		berater_problem_infamie_hoch = yes
+		berater_problem_abspaltung = yes
+		berater_problem_legitimitaet = yes
+		berater_problem_forschung = yes
+		berater_problem_bau_leer = yes
+		berater_problem_bau_lang = yes
+		berater_problem_gold_ungenutzt = yes
+		berater_problem_steuern_hoch = yes
+		berater_problem_alphabetisierung = yes
+		berater_problem_industriegueter_teuer = yes
+		berater_problem_gesetze = yes
+	}
+}
+
+# Mindestens ein Befund der Stufe „kritisch“
+berater_hat_problem_kritisch = {
+	OR = {
+		berater_problem_bankrott = yes
+		berater_problem_schulden_kritisch = yes
+		berater_problem_revolution = yes
+		berater_problem_kriegsunterstuetzung = yes
+		berater_problem_infamie_paria = yes
+	}
+}
+
+# Mindestens ein Befund der Stufe „warnung“
+berater_hat_problem_warnung = {
+	OR = {
+		berater_problem_schulden_hoch = yes
+		berater_problem_defizit = yes
+		berater_problem_buerokratie = yes
+		berater_problem_autoritaet = yes
+		berater_problem_einfluss = yes
+		berater_problem_unruhe = yes
+		berater_problem_radikale = yes
+		berater_problem_ig_wuetend = yes
+		berater_problem_arbeitslosigkeit = yes
+		berater_problem_lebensstandard = yes
+		berater_problem_engpaesse = yes
+		berater_problem_infamie_hoch = yes
+		berater_problem_abspaltung = yes
+		berater_problem_legitimitaet = yes
+	}
+}
+
+# Mindestens ein Befund der Stufe „tipp“
+berater_hat_problem_tipp = {
+	OR = {
+		berater_problem_forschung = yes
+		berater_problem_bau_leer = yes
+		berater_problem_bau_lang = yes
+		berater_problem_gold_ungenutzt = yes
+		berater_problem_steuern_hoch = yes
+		berater_problem_alphabetisierung = yes
+		berater_problem_industriegueter_teuer = yes
+		berater_problem_gesetze = yes
+	}
+}

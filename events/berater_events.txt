@@ -1,0 +1,208 @@
+﻿# Erzeugt von werkzeuge/erzeuge_mod.py – nicht von Hand ändern.
+
+namespace = berater
+
+# Vollständiger Bericht: über den Journal-Knopf oder einmal im Jahr
+berater.1 = {
+	type = country_event
+	title = berater.1.t
+	desc = {
+		desc = berater.1.d
+		triggered_desc = {
+			desc = berater_bericht_kopf_kritisch
+			trigger = { berater_hat_problem_kritisch = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_bankrott
+			trigger = { berater_problem_bankrott = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_schulden_kritisch
+			trigger = { berater_problem_schulden_kritisch = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_revolution
+			trigger = { berater_problem_revolution = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_kriegsunterstuetzung
+			trigger = { berater_problem_kriegsunterstuetzung = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_infamie_paria
+			trigger = { berater_problem_infamie_paria = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_kopf_warnung
+			trigger = { berater_hat_problem_warnung = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_schulden_hoch
+			trigger = { berater_problem_schulden_hoch = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_defizit
+			trigger = { berater_problem_defizit = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_buerokratie
+			trigger = { berater_problem_buerokratie = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_autoritaet
+			trigger = { berater_problem_autoritaet = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_einfluss
+			trigger = { berater_problem_einfluss = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_unruhe
+			trigger = { berater_problem_unruhe = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_radikale
+			trigger = { berater_problem_radikale = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_ig_wuetend
+			trigger = { berater_problem_ig_wuetend = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_arbeitslosigkeit
+			trigger = { berater_problem_arbeitslosigkeit = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_lebensstandard
+			trigger = { berater_problem_lebensstandard = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_engpaesse
+			trigger = { berater_problem_engpaesse = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_infamie_hoch
+			trigger = { berater_problem_infamie_hoch = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_abspaltung
+			trigger = { berater_problem_abspaltung = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_legitimitaet
+			trigger = { berater_problem_legitimitaet = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_kopf_tipp
+			trigger = { berater_hat_problem_tipp = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_forschung
+			trigger = { berater_problem_forschung = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_bau_leer
+			trigger = { berater_problem_bau_leer = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_bau_lang
+			trigger = { berater_problem_bau_lang = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_gold_ungenutzt
+			trigger = { berater_problem_gold_ungenutzt = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_steuern_hoch
+			trigger = { berater_problem_steuern_hoch = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_alphabetisierung
+			trigger = { berater_problem_alphabetisierung = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_industriegueter_teuer
+			trigger = { berater_problem_industriegueter_teuer = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_gesetze
+			trigger = { berater_problem_gesetze = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_alles_gut
+			trigger = { berater_hat_problem = no }
+		}
+	}
+	flavor = berater.1.f
+	event_image = {
+		texture = "gfx/event_pictures/unspecific_politicians_arguing.dds"
+	}
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+
+	trigger = {
+		is_player = yes
+	}
+
+	option = {
+		name = berater.1.a
+		default_option = yes
+	}
+}
+
+# Krisenwarnung: nur akute Probleme, ausgelöst von berater_monatlich
+berater.2 = {
+	type = country_event
+	title = berater.2.t
+	desc = {
+		desc = berater.2.d
+		triggered_desc = {
+			desc = berater_bericht_kopf_kritisch
+			trigger = { berater_hat_problem_kritisch = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_bankrott
+			trigger = { berater_problem_bankrott = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_schulden_kritisch
+			trigger = { berater_problem_schulden_kritisch = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_revolution
+			trigger = { berater_problem_revolution = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_kriegsunterstuetzung
+			trigger = { berater_problem_kriegsunterstuetzung = yes }
+		}
+		triggered_desc = {
+			desc = berater_bericht_infamie_paria
+			trigger = { berater_problem_infamie_paria = yes }
+		}
+	}
+	flavor = berater.2.f
+	event_image = {
+		texture = "gfx/event_pictures/unspecific_politicians_arguing.dds"
+	}
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+
+	trigger = {
+		is_player = yes
+		berater_hat_problem_kritisch = yes
+	}
+
+	option = {
+		name = berater.2.a
+		default_option = yes
+	}
+	option = {
+		name = berater.2.b
+		trigger_event = { id = berater.1 popup = yes }
+	}
+	option = {
+		name = berater.2.c
+		set_variable = berater_keine_krisenwarnungen
+	}
+}

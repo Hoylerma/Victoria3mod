@@ -1,0 +1,5 @@
+﻿# Erzeugt von werkzeuge/erzeuge_mod.py – nicht von Hand ändern.
+
+je_group_berater = {
+	context = country
+}

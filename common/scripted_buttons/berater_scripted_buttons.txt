@@ -1,0 +1,70 @@
+﻿# Erzeugt von werkzeuge/erzeuge_mod.py – nicht von Hand ändern.
+
+# Knöpfe im Journal des Beraters
+
+berater_knopf_bericht = {
+	name = berater_knopf_bericht
+	desc = berater_knopf_bericht_desc
+	visible = { always = yes }
+	possible = { always = yes }
+	effect = {
+		trigger_event = { id = berater.1 popup = yes }
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+berater_knopf_jahresbericht = {
+	name = {
+		first_valid = {
+			triggered_desc = {
+				desc = berater_knopf_jahresbericht_aus
+				trigger = { has_variable = berater_kein_jahresbericht }
+			}
+			desc = berater_knopf_jahresbericht_an
+		}
+	}
+	desc = berater_knopf_jahresbericht_desc
+	visible = { always = yes }
+	possible = { always = yes }
+	effect = {
+		if = {
+			limit = { has_variable = berater_kein_jahresbericht }
+			remove_variable = berater_kein_jahresbericht
+		}
+		else = {
+			set_variable = berater_kein_jahresbericht
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+berater_knopf_krisen = {
+	name = {
+		first_valid = {
+			triggered_desc = {
+				desc = berater_knopf_krisen_aus
+				trigger = { has_variable = berater_keine_krisenwarnungen }
+			}
+			desc = berater_knopf_krisen_an
+		}
+	}
+	desc = berater_knopf_krisen_desc
+	visible = { always = yes }
+	possible = { always = yes }
+	effect = {
+		if = {
+			limit = { has_variable = berater_keine_krisenwarnungen }
+			remove_variable = berater_keine_krisenwarnungen
+		}
+		else = {
+			set_variable = berater_keine_krisenwarnungen
+		}
+	}
+	ai_chance = {
+		value = 0
+	}
+}

@@ -1,0 +1,37 @@
+﻿# Erzeugt von werkzeuge/erzeuge_mod.py – nicht von Hand ändern.
+
+# Hängt die Prüfungen an die monatlichen und jährlichen Takte des Spiels an.
+# Die Listen werden mit den Listen des Grundspiels und anderer Mods zusammengeführt.
+on_monthly_pulse_country = {
+	on_actions = { berater_monatlich }
+}
+
+on_yearly_pulse_country = {
+	on_actions = { berater_jaehrlich }
+}
+
+# Krisenwarnung als Popup, höchstens alle sechs Monate
+berater_monatlich = {
+	trigger = {
+		is_player = yes
+		NOT = { has_variable = berater_keine_krisenwarnungen }
+		NOT = { has_variable = berater_krisenwarnung_pause }
+		berater_hat_problem_kritisch = yes
+	}
+	effect = {
+		set_variable = {
+			name = berater_krisenwarnung_pause
+			months = 6
+		}
+		trigger_event = { id = berater.2 popup = yes }
+	}
+}
+
+# Jahresbericht
+berater_jaehrlich = {
+	trigger = {
+		is_player = yes
+		NOT = { has_variable = berater_kein_jahresbericht }
+	}
+	events = { berater.1 }
+}

@@ -1,0 +1,17 @@
+﻿# Erzeugt von werkzeuge/erzeuge_mod.py – nicht von Hand ändern.
+
+# Wöchentliche Einnahmen minus Ausgaben des Staates
+berater_wochenbilanz = {
+	value = income
+	subtract = expenses
+}
+
+# Anteil der Bevölkerung, der unter dem erwarteten Lebensstandard lebt (0 bis 1)
+berater_anteil_unter_erwartung = {
+	value = 0
+	if = {
+		limit = { total_population > 0 }
+		value = population_below_expected_sol
+		divide = total_population
+	}
+}

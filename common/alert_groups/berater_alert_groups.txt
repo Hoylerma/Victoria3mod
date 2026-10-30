@@ -1,0 +1,5 @@
+﻿# Erzeugt von werkzeuge/erzeuge_mod.py – nicht von Hand ändern.
+
+# Fasst die Tipps des Beraters in der Warnleiste zu einem Eintrag zusammen
+berater_tipps = {
+}
