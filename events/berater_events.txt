@@ -2,7 +2,7 @@
 
 namespace = berater
 
-# Vollständiger Bericht: über den Journal-Knopf oder einmal im Jahr
+# Lagebericht: alle Befunde mit Ratschlägen; über den Journal-Knopf oder einmal im Jahr
 berater.1 = {
 	type = country_event
 	title = berater.1.t
@@ -10,132 +10,216 @@ berater.1 = {
 		desc = berater.1.d
 		triggered_desc = {
 			desc = berater_bericht_kopf_kritisch
-			trigger = { berater_hat_problem_kritisch = yes }
+			trigger = {
+				berater_hat_problem_kritisch = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_bankrott
-			trigger = { berater_problem_bankrott = yes }
+			trigger = {
+				berater_problem_bankrott = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_schulden_kritisch
-			trigger = { berater_problem_schulden_kritisch = yes }
+			trigger = {
+				berater_problem_schulden_kritisch = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_revolution
-			trigger = { berater_problem_revolution = yes }
+			trigger = {
+				berater_problem_revolution = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_kriegsunterstuetzung
-			trigger = { berater_problem_kriegsunterstuetzung = yes }
+			trigger = {
+				berater_problem_kriegsunterstuetzung = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_infamie_paria
-			trigger = { berater_problem_infamie_paria = yes }
+			trigger = {
+				berater_problem_infamie_paria = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_kopf_warnung
-			trigger = { berater_hat_problem_warnung = yes }
+			trigger = {
+				berater_hat_problem_warnung = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_schulden_hoch
-			trigger = { berater_problem_schulden_hoch = yes }
+			trigger = {
+				berater_problem_schulden_hoch = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_defizit
-			trigger = { berater_problem_defizit = yes }
+			trigger = {
+				berater_problem_defizit = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_buerokratie
-			trigger = { berater_problem_buerokratie = yes }
+			trigger = {
+				berater_problem_buerokratie = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_autoritaet
-			trigger = { berater_problem_autoritaet = yes }
+			trigger = {
+				berater_problem_autoritaet = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_einfluss
-			trigger = { berater_problem_einfluss = yes }
+			trigger = {
+				berater_problem_einfluss = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_unruhe
-			trigger = { berater_problem_unruhe = yes }
+			trigger = {
+				berater_problem_unruhe = yes
+			}
+		}
+		triggered_desc = {
+			desc = berater_bericht_unruhe_detail
+			trigger = {
+				berater_problem_unruhe = yes
+				exists = scope:berater_ort_unruhe
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_radikale
-			trigger = { berater_problem_radikale = yes }
+			trigger = {
+				berater_problem_radikale = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_ig_wuetend
-			trigger = { berater_problem_ig_wuetend = yes }
+			trigger = {
+				berater_problem_ig_wuetend = yes
+			}
+		}
+		triggered_desc = {
+			desc = berater_bericht_ig_wuetend_detail
+			trigger = {
+				berater_problem_ig_wuetend = yes
+				exists = scope:berater_ig_wuetend
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_arbeitslosigkeit
-			trigger = { berater_problem_arbeitslosigkeit = yes }
+			trigger = {
+				berater_problem_arbeitslosigkeit = yes
+			}
+		}
+		triggered_desc = {
+			desc = berater_bericht_arbeitslosigkeit_detail
+			trigger = {
+				berater_problem_arbeitslosigkeit = yes
+				exists = scope:berater_ort_arbeitslos
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_lebensstandard
-			trigger = { berater_problem_lebensstandard = yes }
+			trigger = {
+				berater_problem_lebensstandard = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_engpaesse
-			trigger = { berater_problem_engpaesse = yes }
+			trigger = {
+				berater_problem_engpaesse = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_infamie_hoch
-			trigger = { berater_problem_infamie_hoch = yes }
+			trigger = {
+				berater_problem_infamie_hoch = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_abspaltung
-			trigger = { berater_problem_abspaltung = yes }
+			trigger = {
+				berater_problem_abspaltung = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_legitimitaet
-			trigger = { berater_problem_legitimitaet = yes }
+			trigger = {
+				berater_problem_legitimitaet = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_kopf_tipp
-			trigger = { berater_hat_problem_tipp = yes }
+			trigger = {
+				berater_hat_problem_tipp = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_forschung
-			trigger = { berater_problem_forschung = yes }
+			trigger = {
+				berater_problem_forschung = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_bau_leer
-			trigger = { berater_problem_bau_leer = yes }
+			trigger = {
+				berater_problem_bau_leer = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_bau_lang
-			trigger = { berater_problem_bau_lang = yes }
+			trigger = {
+				berater_problem_bau_lang = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_gold_ungenutzt
-			trigger = { berater_problem_gold_ungenutzt = yes }
+			trigger = {
+				berater_problem_gold_ungenutzt = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_steuern_hoch
-			trigger = { berater_problem_steuern_hoch = yes }
+			trigger = {
+				berater_problem_steuern_hoch = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_alphabetisierung
-			trigger = { berater_problem_alphabetisierung = yes }
+			trigger = {
+				berater_problem_alphabetisierung = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_industriegueter_teuer
-			trigger = { berater_problem_industriegueter_teuer = yes }
+			trigger = {
+				berater_problem_industriegueter_teuer = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_gesetze
-			trigger = { berater_problem_gesetze = yes }
+			trigger = {
+				berater_problem_gesetze = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_alles_gut
-			trigger = { berater_hat_problem = no }
+			trigger = {
+				berater_hat_problem = no
+			}
 		}
+		desc = berater_bericht_hinweis_plaene
 	}
 	flavor = berater.1.f
 	event_image = {
-		texture = "gfx/event_pictures/unspecific_politicians_arguing.dds"
+		video = "unspecific_politicians_arguing"
 	}
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 	duration = 3
@@ -144,9 +228,55 @@ berater.1 = {
 		is_player = yes
 	}
 
+	immediate = {
+		if = {
+			limit = { berater_problem_unruhe = yes }
+			ordered_scope_state = {
+				limit = {
+					is_incorporated = yes
+					state_population >= 100000
+				}
+				order_by = turmoil
+				max = 1
+				save_scope_as = berater_ort_unruhe
+			}
+		}
+		if = {
+			limit = { berater_problem_ig_wuetend = yes }
+			ordered_interest_group = {
+				limit = {
+					is_powerful = yes
+				}
+				order_by = berater_ig_unmut
+				max = 1
+				save_scope_as = berater_ig_wuetend
+			}
+		}
+		if = {
+			limit = { berater_problem_arbeitslosigkeit = yes }
+			ordered_scope_state = {
+				limit = {
+					is_incorporated = yes
+					state_population >= 250000
+				}
+				order_by = berater_arbeitslose
+				max = 1
+				save_scope_as = berater_ort_arbeitslos
+			}
+		}
+	}
+
 	option = {
 		name = berater.1.a
 		default_option = yes
+	}
+	option = {
+		name = berater_zeige_bauplan
+		trigger_event = { id = berater.3 popup = yes }
+	}
+	option = {
+		name = berater_zeige_gesetzesplan
+		trigger_event = { id = berater.4 popup = yes }
 	}
 }
 
@@ -158,34 +288,46 @@ berater.2 = {
 		desc = berater.2.d
 		triggered_desc = {
 			desc = berater_bericht_kopf_kritisch
-			trigger = { berater_hat_problem_kritisch = yes }
+			trigger = {
+				berater_hat_problem_kritisch = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_bankrott
-			trigger = { berater_problem_bankrott = yes }
+			trigger = {
+				berater_problem_bankrott = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_schulden_kritisch
-			trigger = { berater_problem_schulden_kritisch = yes }
+			trigger = {
+				berater_problem_schulden_kritisch = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_revolution
-			trigger = { berater_problem_revolution = yes }
+			trigger = {
+				berater_problem_revolution = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_kriegsunterstuetzung
-			trigger = { berater_problem_kriegsunterstuetzung = yes }
+			trigger = {
+				berater_problem_kriegsunterstuetzung = yes
+			}
 		}
 		triggered_desc = {
 			desc = berater_bericht_infamie_paria
-			trigger = { berater_problem_infamie_paria = yes }
+			trigger = {
+				berater_problem_infamie_paria = yes
+			}
 		}
 	}
 	flavor = berater.2.f
 	event_image = {
-		texture = "gfx/event_pictures/unspecific_politicians_arguing.dds"
+		video = "europenorthamerica_political_extremism"
 	}
-	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 	duration = 3
 
 	trigger = {
@@ -204,5 +346,3159 @@ berater.2 = {
 	option = {
 		name = berater.2.c
 		set_variable = berater_keine_krisenwarnungen
+	}
+}
+
+# Bauplan: was in welchem Staat gebaut werden sollte
+berater.3 = {
+	type = country_event
+	title = berater.3.t
+	desc = {
+		desc = berater.3.d
+		triggered_desc = {
+			desc = berater_bauplan_kopf_gueter
+			trigger = {
+				OR = {
+					exists = scope:berater_bau_coal
+					exists = scope:berater_bau_iron
+					exists = scope:berater_bau_wood
+					exists = scope:berater_bau_tools
+					exists = scope:berater_bau_steel
+					exists = scope:berater_bau_fabric
+					exists = scope:berater_bau_glass
+					exists = scope:berater_bau_paper
+					exists = scope:berater_bau_sulfur
+					exists = scope:berater_bau_lead
+					exists = scope:berater_bau_explosives
+					exists = scope:berater_bau_fertilizer
+					exists = scope:berater_bau_engines
+					exists = scope:berater_bau_oil
+					exists = scope:berater_bau_rubber
+					exists = scope:berater_bau_hardwood
+					exists = scope:berater_bau_dye
+					exists = scope:berater_bau_electricity
+					exists = scope:berater_bau_transportation
+					exists = scope:berater_bau_grain
+					exists = scope:berater_bau_groceries
+					exists = scope:berater_bau_clothes
+					exists = scope:berater_bau_furniture
+					exists = scope:berater_bau_meat
+					exists = scope:berater_bau_fish
+					exists = scope:berater_bau_fruit
+					exists = scope:berater_bau_sugar
+					exists = scope:berater_bau_liquor
+					exists = scope:berater_bau_wine
+					exists = scope:berater_bau_tobacco
+					exists = scope:berater_bau_coffee
+					exists = scope:berater_bau_tea
+					exists = scope:berater_bau_services
+					exists = scope:berater_bau_porcelain
+					exists = scope:berater_bau_luxury_clothes
+					exists = scope:berater_bau_luxury_furniture
+					exists = scope:berater_bau_silk
+					exists = scope:berater_bau_small_arms
+					exists = scope:berater_bau_ammunition
+					exists = scope:berater_bau_artillery
+					exists = scope:berater_bau_telephones
+					exists = scope:berater_bau_radios
+					exists = scope:berater_bau_automobiles
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_coal_1
+			trigger = {
+				exists = scope:berater_bau_coal
+				exists = scope:berater_ort_coal_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_coal_kein_ort
+			trigger = {
+				exists = scope:berater_bau_coal
+				NOR = {
+					exists = scope:berater_ort_coal_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_iron_1
+			trigger = {
+				exists = scope:berater_bau_iron
+				exists = scope:berater_ort_iron_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_iron_kein_ort
+			trigger = {
+				exists = scope:berater_bau_iron
+				NOR = {
+					exists = scope:berater_ort_iron_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_wood_1
+			trigger = {
+				exists = scope:berater_bau_wood
+				exists = scope:berater_ort_wood_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_wood_kein_ort
+			trigger = {
+				exists = scope:berater_bau_wood
+				NOR = {
+					exists = scope:berater_ort_wood_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_tools_1
+			trigger = {
+				exists = scope:berater_bau_tools
+				exists = scope:berater_ort_tools_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_tools_kein_ort
+			trigger = {
+				exists = scope:berater_bau_tools
+				NOR = {
+					exists = scope:berater_ort_tools_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_steel_1
+			trigger = {
+				exists = scope:berater_bau_steel
+				exists = scope:berater_ort_steel_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_steel_kein_ort
+			trigger = {
+				exists = scope:berater_bau_steel
+				NOR = {
+					exists = scope:berater_ort_steel_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_fabric_1
+			trigger = {
+				exists = scope:berater_bau_fabric
+				exists = scope:berater_ort_fabric_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_fabric_kein_ort
+			trigger = {
+				exists = scope:berater_bau_fabric
+				NOR = {
+					exists = scope:berater_ort_fabric_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_glass_1
+			trigger = {
+				exists = scope:berater_bau_glass
+				exists = scope:berater_ort_glass_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_glass_kein_ort
+			trigger = {
+				exists = scope:berater_bau_glass
+				NOR = {
+					exists = scope:berater_ort_glass_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_paper_1
+			trigger = {
+				exists = scope:berater_bau_paper
+				exists = scope:berater_ort_paper_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_paper_kein_ort
+			trigger = {
+				exists = scope:berater_bau_paper
+				NOR = {
+					exists = scope:berater_ort_paper_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_sulfur_1
+			trigger = {
+				exists = scope:berater_bau_sulfur
+				exists = scope:berater_ort_sulfur_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_sulfur_kein_ort
+			trigger = {
+				exists = scope:berater_bau_sulfur
+				NOR = {
+					exists = scope:berater_ort_sulfur_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_lead_1
+			trigger = {
+				exists = scope:berater_bau_lead
+				exists = scope:berater_ort_lead_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_lead_kein_ort
+			trigger = {
+				exists = scope:berater_bau_lead
+				NOR = {
+					exists = scope:berater_ort_lead_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_explosives_1
+			trigger = {
+				exists = scope:berater_bau_explosives
+				exists = scope:berater_ort_explosives_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_explosives_kein_ort
+			trigger = {
+				exists = scope:berater_bau_explosives
+				NOR = {
+					exists = scope:berater_ort_explosives_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_fertilizer_1
+			trigger = {
+				exists = scope:berater_bau_fertilizer
+				exists = scope:berater_ort_fertilizer_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_fertilizer_kein_ort
+			trigger = {
+				exists = scope:berater_bau_fertilizer
+				NOR = {
+					exists = scope:berater_ort_fertilizer_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_engines_1
+			trigger = {
+				exists = scope:berater_bau_engines
+				exists = scope:berater_ort_engines_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_engines_kein_ort
+			trigger = {
+				exists = scope:berater_bau_engines
+				NOR = {
+					exists = scope:berater_ort_engines_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_oil_1
+			trigger = {
+				exists = scope:berater_bau_oil
+				exists = scope:berater_ort_oil_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_oil_kein_ort
+			trigger = {
+				exists = scope:berater_bau_oil
+				NOR = {
+					exists = scope:berater_ort_oil_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_rubber_1
+			trigger = {
+				exists = scope:berater_bau_rubber
+				exists = scope:berater_ort_rubber_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_rubber_kein_ort
+			trigger = {
+				exists = scope:berater_bau_rubber
+				NOR = {
+					exists = scope:berater_ort_rubber_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_hardwood_1
+			trigger = {
+				exists = scope:berater_bau_hardwood
+				exists = scope:berater_ort_hardwood_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_hardwood_2
+			trigger = {
+				exists = scope:berater_bau_hardwood
+				exists = scope:berater_ort_hardwood_2
+				NOR = {
+					exists = scope:berater_ort_hardwood_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_hardwood_kein_ort
+			trigger = {
+				exists = scope:berater_bau_hardwood
+				NOR = {
+					exists = scope:berater_ort_hardwood_1
+					exists = scope:berater_ort_hardwood_2
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_dye_1
+			trigger = {
+				exists = scope:berater_bau_dye
+				exists = scope:berater_ort_dye_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_dye_kein_ort
+			trigger = {
+				exists = scope:berater_bau_dye
+				NOR = {
+					exists = scope:berater_ort_dye_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_electricity_1
+			trigger = {
+				exists = scope:berater_bau_electricity
+				exists = scope:berater_ort_electricity_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_electricity_kein_ort
+			trigger = {
+				exists = scope:berater_bau_electricity
+				NOR = {
+					exists = scope:berater_ort_electricity_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_transportation_1
+			trigger = {
+				exists = scope:berater_bau_transportation
+				exists = scope:berater_ort_transportation_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_transportation_kein_ort
+			trigger = {
+				exists = scope:berater_bau_transportation
+				NOR = {
+					exists = scope:berater_ort_transportation_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_grain_1
+			trigger = {
+				exists = scope:berater_bau_grain
+				exists = scope:berater_ort_grain_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_grain_2
+			trigger = {
+				exists = scope:berater_bau_grain
+				exists = scope:berater_ort_grain_2
+				NOR = {
+					exists = scope:berater_ort_grain_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_grain_3
+			trigger = {
+				exists = scope:berater_bau_grain
+				exists = scope:berater_ort_grain_3
+				NOR = {
+					exists = scope:berater_ort_grain_1
+					exists = scope:berater_ort_grain_2
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_grain_4
+			trigger = {
+				exists = scope:berater_bau_grain
+				exists = scope:berater_ort_grain_4
+				NOR = {
+					exists = scope:berater_ort_grain_1
+					exists = scope:berater_ort_grain_2
+					exists = scope:berater_ort_grain_3
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_grain_5
+			trigger = {
+				exists = scope:berater_bau_grain
+				exists = scope:berater_ort_grain_5
+				NOR = {
+					exists = scope:berater_ort_grain_1
+					exists = scope:berater_ort_grain_2
+					exists = scope:berater_ort_grain_3
+					exists = scope:berater_ort_grain_4
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_grain_kein_ort
+			trigger = {
+				exists = scope:berater_bau_grain
+				NOR = {
+					exists = scope:berater_ort_grain_1
+					exists = scope:berater_ort_grain_2
+					exists = scope:berater_ort_grain_3
+					exists = scope:berater_ort_grain_4
+					exists = scope:berater_ort_grain_5
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_groceries_1
+			trigger = {
+				exists = scope:berater_bau_groceries
+				exists = scope:berater_ort_groceries_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_groceries_kein_ort
+			trigger = {
+				exists = scope:berater_bau_groceries
+				NOR = {
+					exists = scope:berater_ort_groceries_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_clothes_1
+			trigger = {
+				exists = scope:berater_bau_clothes
+				exists = scope:berater_ort_clothes_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_clothes_kein_ort
+			trigger = {
+				exists = scope:berater_bau_clothes
+				NOR = {
+					exists = scope:berater_ort_clothes_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_furniture_1
+			trigger = {
+				exists = scope:berater_bau_furniture
+				exists = scope:berater_ort_furniture_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_furniture_kein_ort
+			trigger = {
+				exists = scope:berater_bau_furniture
+				NOR = {
+					exists = scope:berater_ort_furniture_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_meat_1
+			trigger = {
+				exists = scope:berater_bau_meat
+				exists = scope:berater_ort_meat_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_meat_kein_ort
+			trigger = {
+				exists = scope:berater_bau_meat
+				NOR = {
+					exists = scope:berater_ort_meat_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_fish_1
+			trigger = {
+				exists = scope:berater_bau_fish
+				exists = scope:berater_ort_fish_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_fish_kein_ort
+			trigger = {
+				exists = scope:berater_bau_fish
+				NOR = {
+					exists = scope:berater_ort_fish_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_fruit_1
+			trigger = {
+				exists = scope:berater_bau_fruit
+				exists = scope:berater_ort_fruit_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_fruit_2
+			trigger = {
+				exists = scope:berater_bau_fruit
+				exists = scope:berater_ort_fruit_2
+				NOR = {
+					exists = scope:berater_ort_fruit_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_fruit_kein_ort
+			trigger = {
+				exists = scope:berater_bau_fruit
+				NOR = {
+					exists = scope:berater_ort_fruit_1
+					exists = scope:berater_ort_fruit_2
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_sugar_1
+			trigger = {
+				exists = scope:berater_bau_sugar
+				exists = scope:berater_ort_sugar_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_sugar_kein_ort
+			trigger = {
+				exists = scope:berater_bau_sugar
+				NOR = {
+					exists = scope:berater_ort_sugar_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_liquor_1
+			trigger = {
+				exists = scope:berater_bau_liquor
+				exists = scope:berater_ort_liquor_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_liquor_kein_ort
+			trigger = {
+				exists = scope:berater_bau_liquor
+				NOR = {
+					exists = scope:berater_ort_liquor_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_wine_1
+			trigger = {
+				exists = scope:berater_bau_wine
+				exists = scope:berater_ort_wine_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_wine_kein_ort
+			trigger = {
+				exists = scope:berater_bau_wine
+				NOR = {
+					exists = scope:berater_ort_wine_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_tobacco_1
+			trigger = {
+				exists = scope:berater_bau_tobacco
+				exists = scope:berater_ort_tobacco_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_tobacco_kein_ort
+			trigger = {
+				exists = scope:berater_bau_tobacco
+				NOR = {
+					exists = scope:berater_ort_tobacco_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_coffee_1
+			trigger = {
+				exists = scope:berater_bau_coffee
+				exists = scope:berater_ort_coffee_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_coffee_kein_ort
+			trigger = {
+				exists = scope:berater_bau_coffee
+				NOR = {
+					exists = scope:berater_ort_coffee_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_tea_1
+			trigger = {
+				exists = scope:berater_bau_tea
+				exists = scope:berater_ort_tea_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_tea_kein_ort
+			trigger = {
+				exists = scope:berater_bau_tea
+				NOR = {
+					exists = scope:berater_ort_tea_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_services_1
+			trigger = {
+				exists = scope:berater_bau_services
+				exists = scope:berater_ort_services_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_services_kein_ort
+			trigger = {
+				exists = scope:berater_bau_services
+				NOR = {
+					exists = scope:berater_ort_services_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_porcelain_1
+			trigger = {
+				exists = scope:berater_bau_porcelain
+				exists = scope:berater_ort_porcelain_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_porcelain_kein_ort
+			trigger = {
+				exists = scope:berater_bau_porcelain
+				NOR = {
+					exists = scope:berater_ort_porcelain_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_luxury_clothes_1
+			trigger = {
+				exists = scope:berater_bau_luxury_clothes
+				exists = scope:berater_ort_luxury_clothes_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_luxury_clothes_kein_ort
+			trigger = {
+				exists = scope:berater_bau_luxury_clothes
+				NOR = {
+					exists = scope:berater_ort_luxury_clothes_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_luxury_furniture_1
+			trigger = {
+				exists = scope:berater_bau_luxury_furniture
+				exists = scope:berater_ort_luxury_furniture_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_luxury_furniture_kein_ort
+			trigger = {
+				exists = scope:berater_bau_luxury_furniture
+				NOR = {
+					exists = scope:berater_ort_luxury_furniture_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_silk_1
+			trigger = {
+				exists = scope:berater_bau_silk
+				exists = scope:berater_ort_silk_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_silk_kein_ort
+			trigger = {
+				exists = scope:berater_bau_silk
+				NOR = {
+					exists = scope:berater_ort_silk_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_small_arms_1
+			trigger = {
+				exists = scope:berater_bau_small_arms
+				exists = scope:berater_ort_small_arms_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_small_arms_kein_ort
+			trigger = {
+				exists = scope:berater_bau_small_arms
+				NOR = {
+					exists = scope:berater_ort_small_arms_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_ammunition_1
+			trigger = {
+				exists = scope:berater_bau_ammunition
+				exists = scope:berater_ort_ammunition_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_ammunition_kein_ort
+			trigger = {
+				exists = scope:berater_bau_ammunition
+				NOR = {
+					exists = scope:berater_ort_ammunition_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_artillery_1
+			trigger = {
+				exists = scope:berater_bau_artillery
+				exists = scope:berater_ort_artillery_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_artillery_kein_ort
+			trigger = {
+				exists = scope:berater_bau_artillery
+				NOR = {
+					exists = scope:berater_ort_artillery_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_telephones_1
+			trigger = {
+				exists = scope:berater_bau_telephones
+				exists = scope:berater_ort_telephones_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_telephones_kein_ort
+			trigger = {
+				exists = scope:berater_bau_telephones
+				NOR = {
+					exists = scope:berater_ort_telephones_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_radios_1
+			trigger = {
+				exists = scope:berater_bau_radios
+				exists = scope:berater_ort_radios_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_radios_kein_ort
+			trigger = {
+				exists = scope:berater_bau_radios
+				NOR = {
+					exists = scope:berater_ort_radios_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_automobiles_1
+			trigger = {
+				exists = scope:berater_bau_automobiles
+				exists = scope:berater_ort_automobiles_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_automobiles_kein_ort
+			trigger = {
+				exists = scope:berater_bau_automobiles
+				NOR = {
+					exists = scope:berater_ort_automobiles_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_kopf_infrastruktur
+			trigger = {
+				exists = scope:berater_infra_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_infra_1
+			trigger = {
+				exists = scope:berater_infra_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_infra_2
+			trigger = {
+				exists = scope:berater_infra_2
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_kopf_staat
+			trigger = {
+				OR = {
+					exists = scope:berater_ort_verwaltung
+					exists = scope:berater_ort_bausektor
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_verwaltung
+			trigger = {
+				exists = scope:berater_ort_verwaltung
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_bausektor
+			trigger = {
+				exists = scope:berater_ort_bausektor
+			}
+		}
+		triggered_desc = {
+			desc = berater_bauplan_nichts
+			trigger = {
+				NOR = {
+					exists = scope:berater_bau_coal
+					exists = scope:berater_bau_iron
+					exists = scope:berater_bau_wood
+					exists = scope:berater_bau_tools
+					exists = scope:berater_bau_steel
+					exists = scope:berater_bau_fabric
+					exists = scope:berater_bau_glass
+					exists = scope:berater_bau_paper
+					exists = scope:berater_bau_sulfur
+					exists = scope:berater_bau_lead
+					exists = scope:berater_bau_explosives
+					exists = scope:berater_bau_fertilizer
+					exists = scope:berater_bau_engines
+					exists = scope:berater_bau_oil
+					exists = scope:berater_bau_rubber
+					exists = scope:berater_bau_hardwood
+					exists = scope:berater_bau_dye
+					exists = scope:berater_bau_electricity
+					exists = scope:berater_bau_transportation
+					exists = scope:berater_bau_grain
+					exists = scope:berater_bau_groceries
+					exists = scope:berater_bau_clothes
+					exists = scope:berater_bau_furniture
+					exists = scope:berater_bau_meat
+					exists = scope:berater_bau_fish
+					exists = scope:berater_bau_fruit
+					exists = scope:berater_bau_sugar
+					exists = scope:berater_bau_liquor
+					exists = scope:berater_bau_wine
+					exists = scope:berater_bau_tobacco
+					exists = scope:berater_bau_coffee
+					exists = scope:berater_bau_tea
+					exists = scope:berater_bau_services
+					exists = scope:berater_bau_porcelain
+					exists = scope:berater_bau_luxury_clothes
+					exists = scope:berater_bau_luxury_furniture
+					exists = scope:berater_bau_silk
+					exists = scope:berater_bau_small_arms
+					exists = scope:berater_bau_ammunition
+					exists = scope:berater_bau_artillery
+					exists = scope:berater_bau_telephones
+					exists = scope:berater_bau_radios
+					exists = scope:berater_bau_automobiles
+					exists = scope:berater_infra_1
+					exists = scope:berater_ort_verwaltung
+					exists = scope:berater_ort_bausektor
+				}
+			}
+		}
+	}
+	flavor = berater.3.f
+	event_image = {
+		video = "middleeast_engineer_blueprint"
+	}
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	duration = 3
+
+	trigger = {
+		is_player = yes
+	}
+
+	immediate = {
+		set_local_variable = {
+			name = berater_anzahl
+			value = 0
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_coal >= 0.2
+				berater_bedarf_coal > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_coal
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_coal_mine
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_coal_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_iron >= 0.2
+				berater_bedarf_iron > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_iron
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_iron_mine
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_iron_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_wood >= 0.2
+				berater_bedarf_wood > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_wood
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_logging_camp
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_wood_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_tools >= 0.2
+				berater_bedarf_tools > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_tools
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_tooling_workshop
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_tools_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_steel >= 0.2
+				berater_bedarf_steel > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_steel
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_steel_mill
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_steel_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_fabric >= 0.2
+				berater_bedarf_fabric > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_fabric
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_cotton_plantation
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_fabric_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_glass >= 0.2
+				berater_bedarf_glass > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_glass
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_glassworks
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_glass_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_paper >= 0.2
+				berater_bedarf_paper > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_paper
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_paper_mill
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_paper_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_sulfur >= 0.2
+				berater_bedarf_sulfur > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_sulfur
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_sulfur_mine
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_sulfur_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_lead >= 0.2
+				berater_bedarf_lead > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_lead
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_lead_mine
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_lead_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_explosives >= 0.2
+				berater_bedarf_explosives > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_explosives
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_explosives_factory
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_explosives_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_fertilizer >= 0.2
+				berater_bedarf_fertilizer > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_fertilizer
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_chemical_plant
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_fertilizer_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_engines >= 0.2
+				berater_bedarf_engines > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_engines
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_motor_industry
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_engines_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_oil >= 0.2
+				berater_bedarf_oil > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_oil
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_oil_rig
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_oil_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_rubber >= 0.2
+				berater_bedarf_rubber > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_rubber
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_rubber_plantation
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_rubber_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_hardwood >= 0.2
+				berater_bedarf_hardwood > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_hardwood
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_logging_camp
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_hardwood_1
+			}
+			if = {
+				limit = {
+					NOR = {
+						exists = scope:berater_ort_hardwood_1
+					}
+				}
+				ordered_scope_state = {
+					limit = {
+						berater_bauort_geeignet = yes
+						can_construct_building = building_tropical_wood_lodge
+					}
+					order_by = berater_staat_eignung
+					max = 1
+					save_scope_as = berater_ort_hardwood_2
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_dye >= 0.2
+				berater_bedarf_dye > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_dye
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_dye_plantation
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_dye_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_electricity >= 0.2
+				berater_bedarf_electricity > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_electricity
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_power_plant
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_electricity_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_transportation >= 0.2
+				berater_bedarf_transportation > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_transportation
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_railway
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_transportation_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_grain >= 0.2
+				berater_bedarf_grain > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_grain
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_wheat_farm
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_grain_1
+			}
+			if = {
+				limit = {
+					NOR = {
+						exists = scope:berater_ort_grain_1
+					}
+				}
+				ordered_scope_state = {
+					limit = {
+						berater_bauort_geeignet = yes
+						can_construct_building = building_rye_farm
+					}
+					order_by = berater_staat_eignung
+					max = 1
+					save_scope_as = berater_ort_grain_2
+				}
+			}
+			if = {
+				limit = {
+					NOR = {
+						exists = scope:berater_ort_grain_1
+						exists = scope:berater_ort_grain_2
+					}
+				}
+				ordered_scope_state = {
+					limit = {
+						berater_bauort_geeignet = yes
+						can_construct_building = building_rice_farm
+					}
+					order_by = berater_staat_eignung
+					max = 1
+					save_scope_as = berater_ort_grain_3
+				}
+			}
+			if = {
+				limit = {
+					NOR = {
+						exists = scope:berater_ort_grain_1
+						exists = scope:berater_ort_grain_2
+						exists = scope:berater_ort_grain_3
+					}
+				}
+				ordered_scope_state = {
+					limit = {
+						berater_bauort_geeignet = yes
+						can_construct_building = building_maize_farm
+					}
+					order_by = berater_staat_eignung
+					max = 1
+					save_scope_as = berater_ort_grain_4
+				}
+			}
+			if = {
+				limit = {
+					NOR = {
+						exists = scope:berater_ort_grain_1
+						exists = scope:berater_ort_grain_2
+						exists = scope:berater_ort_grain_3
+						exists = scope:berater_ort_grain_4
+					}
+				}
+				ordered_scope_state = {
+					limit = {
+						berater_bauort_geeignet = yes
+						can_construct_building = building_millet_farm
+					}
+					order_by = berater_staat_eignung
+					max = 1
+					save_scope_as = berater_ort_grain_5
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_groceries >= 0.2
+				berater_bedarf_groceries > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_groceries
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_food_industry
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_groceries_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_clothes >= 0.2
+				berater_bedarf_clothes > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_clothes
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_textile_mill
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_clothes_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_furniture >= 0.2
+				berater_bedarf_furniture > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_furniture
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_furniture_manufactory
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_furniture_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_meat >= 0.2
+				berater_bedarf_meat > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_meat
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_livestock_ranch
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_meat_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_fish >= 0.2
+				berater_bedarf_fish > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_fish
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_fishing_wharf
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_fish_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_fruit >= 0.2
+				berater_bedarf_fruit > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_fruit
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_orchard
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_fruit_1
+			}
+			if = {
+				limit = {
+					NOR = {
+						exists = scope:berater_ort_fruit_1
+					}
+				}
+				ordered_scope_state = {
+					limit = {
+						berater_bauort_geeignet = yes
+						can_construct_building = building_banana_plantation
+					}
+					order_by = berater_staat_eignung
+					max = 1
+					save_scope_as = berater_ort_fruit_2
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_sugar >= 0.2
+				berater_bedarf_sugar > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_sugar
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_sugar_plantation
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_sugar_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_liquor >= 0.2
+				berater_bedarf_liquor > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_liquor
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_food_industry
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_liquor_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_wine >= 0.2
+				berater_bedarf_wine > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_wine
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_vineyard
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_wine_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_tobacco >= 0.2
+				berater_bedarf_tobacco > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_tobacco
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_tobacco_plantation
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_tobacco_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_coffee >= 0.2
+				berater_bedarf_coffee > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_coffee
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_coffee_plantation
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_coffee_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_tea >= 0.2
+				berater_bedarf_tea > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_tea
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_tea_plantation
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_tea_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_services >= 0.2
+				berater_bedarf_services > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_services
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_urban_center
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_services_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_porcelain >= 0.2
+				berater_bedarf_porcelain > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_porcelain
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_glassworks
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_porcelain_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_luxury_clothes >= 0.2
+				berater_bedarf_luxury_clothes > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_luxury_clothes
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_textile_mill
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_luxury_clothes_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_luxury_furniture >= 0.2
+				berater_bedarf_luxury_furniture > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_luxury_furniture
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_furniture_manufactory
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_luxury_furniture_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_silk >= 0.2
+				berater_bedarf_silk > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_silk
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_silk_plantation
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_silk_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_small_arms >= 0.2
+				berater_bedarf_small_arms > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_small_arms
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_arms_industry
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_small_arms_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_ammunition >= 0.2
+				berater_bedarf_ammunition > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_ammunition
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_munition_plant
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_ammunition_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_artillery >= 0.2
+				berater_bedarf_artillery > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_artillery
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_artillery_foundry
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_artillery_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_telephones >= 0.2
+				berater_bedarf_telephones > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_telephones
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_electrics_industry
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_telephones_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_radios >= 0.2
+				berater_bedarf_radios > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_radios
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_electrics_industry
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_radios_1
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 5
+				berater_preis_automobiles >= 0.2
+				berater_bedarf_automobiles > 0
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			save_scope_as = berater_bau_automobiles
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_automotive_industry
+				}
+				order_by = berater_staat_eignung
+				max = 1
+				save_scope_as = berater_ort_automobiles_1
+			}
+		}
+		ordered_scope_state = {
+			limit = {
+				berater_bauort_geeignet = yes
+				infrastructure_usage > infrastructure
+			}
+			order_by = berater_infra_defizit
+			max = 1
+			save_scope_as = berater_infra_1
+		}
+		if = {
+			limit = { exists = scope:berater_infra_1 }
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					infrastructure_usage > infrastructure
+					NOT = { this = scope:berater_infra_1 }
+				}
+				order_by = berater_infra_defizit
+				max = 1
+				save_scope_as = berater_infra_2
+			}
+		}
+		if = {
+			limit = { bureaucracy < 0 }
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_government_administration
+				}
+				order_by = state_population
+				max = 1
+				save_scope_as = berater_ort_verwaltung
+			}
+		}
+		if = {
+			limit = {
+				construction_queue_government_duration > 52
+				berater_wochenbilanz > 0
+				scaled_debt < 0.5
+			}
+			ordered_scope_state = {
+				limit = {
+					berater_bauort_geeignet = yes
+					can_construct_building = building_construction_sector
+				}
+				order_by = state_population
+				max = 1
+				save_scope_as = berater_ort_bausektor
+			}
+		}
+	}
+
+	option = {
+		name = berater.3.a
+		default_option = yes
+	}
+	option = {
+		name = berater_zeige_gesetzesplan
+		trigger_event = { id = berater.4 popup = yes }
+	}
+	option = {
+		name = berater_zeige_lagebericht
+		trigger_event = { id = berater.1 popup = yes }
+	}
+}
+
+# Gesetzesplan: welche Gesetze als Nächstes und ob die Regierung sie mitträgt
+berater.4 = {
+	type = country_event
+	title = berater.4.t
+	desc = {
+		desc = berater.4.d
+		triggered_desc = {
+			desc = berater_gesetzplan_aktuell
+			trigger = {
+				exists = scope:berater_gesetz_aktuell
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_kopf_empfehlung
+			trigger = {
+				OR = {
+					exists = scope:berater_gesetz_leibeigenschaft_ziel
+					exists = scope:berater_gesetz_wirtschaft_ziel
+					exists = scope:berater_gesetz_beamte_ziel
+					exists = scope:berater_gesetz_handel_ziel
+					exists = scope:berater_gesetz_schulen_ziel
+					exists = scope:berater_gesetz_landsteuer_ziel
+					exists = scope:berater_gesetz_verbrauchsteuer_ziel
+					exists = scope:berater_gesetz_staatsbuergerschaft_ziel
+					exists = scope:berater_gesetz_polizei_ziel
+					exists = scope:berater_gesetz_arbeiterrechte_ziel
+					exists = scope:berater_gesetz_sozialhilfe_ziel
+					exists = scope:berater_gesetz_oeffentliche_schulen_ziel
+					exists = scope:berater_gesetz_kinderarbeit_ziel
+					exists = scope:berater_gesetz_gesundheit_ziel
+					exists = scope:berater_gesetz_armee_ziel
+					exists = scope:berater_gesetz_vielvoelker_ziel
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_leibeigenschaft
+			trigger = {
+				exists = scope:berater_gesetz_leibeigenschaft_ziel
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_unterstuetzt
+			trigger = {
+				exists = scope:berater_gesetz_leibeigenschaft_ziel
+				scope:berater_gesetz_leibeigenschaft_ziel = { is_reasonable_law_for_petition = yes }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_umstritten
+			trigger = {
+				exists = scope:berater_gesetz_leibeigenschaft_ziel
+				scope:berater_gesetz_leibeigenschaft_ziel = { is_reasonable_law_for_petition = no }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_wirtschaft
+			trigger = {
+				exists = scope:berater_gesetz_wirtschaft_ziel
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_unterstuetzt
+			trigger = {
+				exists = scope:berater_gesetz_wirtschaft_ziel
+				scope:berater_gesetz_wirtschaft_ziel = { is_reasonable_law_for_petition = yes }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_umstritten
+			trigger = {
+				exists = scope:berater_gesetz_wirtschaft_ziel
+				scope:berater_gesetz_wirtschaft_ziel = { is_reasonable_law_for_petition = no }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_beamte
+			trigger = {
+				exists = scope:berater_gesetz_beamte_ziel
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_unterstuetzt
+			trigger = {
+				exists = scope:berater_gesetz_beamte_ziel
+				scope:berater_gesetz_beamte_ziel = { is_reasonable_law_for_petition = yes }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_umstritten
+			trigger = {
+				exists = scope:berater_gesetz_beamte_ziel
+				scope:berater_gesetz_beamte_ziel = { is_reasonable_law_for_petition = no }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_handel
+			trigger = {
+				exists = scope:berater_gesetz_handel_ziel
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_unterstuetzt
+			trigger = {
+				exists = scope:berater_gesetz_handel_ziel
+				scope:berater_gesetz_handel_ziel = { is_reasonable_law_for_petition = yes }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_umstritten
+			trigger = {
+				exists = scope:berater_gesetz_handel_ziel
+				scope:berater_gesetz_handel_ziel = { is_reasonable_law_for_petition = no }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_schulen
+			trigger = {
+				exists = scope:berater_gesetz_schulen_ziel
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_unterstuetzt
+			trigger = {
+				exists = scope:berater_gesetz_schulen_ziel
+				scope:berater_gesetz_schulen_ziel = { is_reasonable_law_for_petition = yes }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_umstritten
+			trigger = {
+				exists = scope:berater_gesetz_schulen_ziel
+				scope:berater_gesetz_schulen_ziel = { is_reasonable_law_for_petition = no }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_landsteuer
+			trigger = {
+				exists = scope:berater_gesetz_landsteuer_ziel
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_unterstuetzt
+			trigger = {
+				exists = scope:berater_gesetz_landsteuer_ziel
+				scope:berater_gesetz_landsteuer_ziel = { is_reasonable_law_for_petition = yes }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_umstritten
+			trigger = {
+				exists = scope:berater_gesetz_landsteuer_ziel
+				scope:berater_gesetz_landsteuer_ziel = { is_reasonable_law_for_petition = no }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_verbrauchsteuer
+			trigger = {
+				exists = scope:berater_gesetz_verbrauchsteuer_ziel
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_unterstuetzt
+			trigger = {
+				exists = scope:berater_gesetz_verbrauchsteuer_ziel
+				scope:berater_gesetz_verbrauchsteuer_ziel = { is_reasonable_law_for_petition = yes }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_umstritten
+			trigger = {
+				exists = scope:berater_gesetz_verbrauchsteuer_ziel
+				scope:berater_gesetz_verbrauchsteuer_ziel = { is_reasonable_law_for_petition = no }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_staatsbuergerschaft
+			trigger = {
+				exists = scope:berater_gesetz_staatsbuergerschaft_ziel
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_unterstuetzt
+			trigger = {
+				exists = scope:berater_gesetz_staatsbuergerschaft_ziel
+				scope:berater_gesetz_staatsbuergerschaft_ziel = { is_reasonable_law_for_petition = yes }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_umstritten
+			trigger = {
+				exists = scope:berater_gesetz_staatsbuergerschaft_ziel
+				scope:berater_gesetz_staatsbuergerschaft_ziel = { is_reasonable_law_for_petition = no }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_polizei
+			trigger = {
+				exists = scope:berater_gesetz_polizei_ziel
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_unterstuetzt
+			trigger = {
+				exists = scope:berater_gesetz_polizei_ziel
+				scope:berater_gesetz_polizei_ziel = { is_reasonable_law_for_petition = yes }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_umstritten
+			trigger = {
+				exists = scope:berater_gesetz_polizei_ziel
+				scope:berater_gesetz_polizei_ziel = { is_reasonable_law_for_petition = no }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_arbeiterrechte
+			trigger = {
+				exists = scope:berater_gesetz_arbeiterrechte_ziel
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_unterstuetzt
+			trigger = {
+				exists = scope:berater_gesetz_arbeiterrechte_ziel
+				scope:berater_gesetz_arbeiterrechte_ziel = { is_reasonable_law_for_petition = yes }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_umstritten
+			trigger = {
+				exists = scope:berater_gesetz_arbeiterrechte_ziel
+				scope:berater_gesetz_arbeiterrechte_ziel = { is_reasonable_law_for_petition = no }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_sozialhilfe
+			trigger = {
+				exists = scope:berater_gesetz_sozialhilfe_ziel
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_unterstuetzt
+			trigger = {
+				exists = scope:berater_gesetz_sozialhilfe_ziel
+				scope:berater_gesetz_sozialhilfe_ziel = { is_reasonable_law_for_petition = yes }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_umstritten
+			trigger = {
+				exists = scope:berater_gesetz_sozialhilfe_ziel
+				scope:berater_gesetz_sozialhilfe_ziel = { is_reasonable_law_for_petition = no }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_oeffentliche_schulen
+			trigger = {
+				exists = scope:berater_gesetz_oeffentliche_schulen_ziel
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_unterstuetzt
+			trigger = {
+				exists = scope:berater_gesetz_oeffentliche_schulen_ziel
+				scope:berater_gesetz_oeffentliche_schulen_ziel = { is_reasonable_law_for_petition = yes }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_umstritten
+			trigger = {
+				exists = scope:berater_gesetz_oeffentliche_schulen_ziel
+				scope:berater_gesetz_oeffentliche_schulen_ziel = { is_reasonable_law_for_petition = no }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_kinderarbeit
+			trigger = {
+				exists = scope:berater_gesetz_kinderarbeit_ziel
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_unterstuetzt
+			trigger = {
+				exists = scope:berater_gesetz_kinderarbeit_ziel
+				scope:berater_gesetz_kinderarbeit_ziel = { is_reasonable_law_for_petition = yes }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_umstritten
+			trigger = {
+				exists = scope:berater_gesetz_kinderarbeit_ziel
+				scope:berater_gesetz_kinderarbeit_ziel = { is_reasonable_law_for_petition = no }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_gesundheit
+			trigger = {
+				exists = scope:berater_gesetz_gesundheit_ziel
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_unterstuetzt
+			trigger = {
+				exists = scope:berater_gesetz_gesundheit_ziel
+				scope:berater_gesetz_gesundheit_ziel = { is_reasonable_law_for_petition = yes }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_umstritten
+			trigger = {
+				exists = scope:berater_gesetz_gesundheit_ziel
+				scope:berater_gesetz_gesundheit_ziel = { is_reasonable_law_for_petition = no }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_armee
+			trigger = {
+				exists = scope:berater_gesetz_armee_ziel
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_unterstuetzt
+			trigger = {
+				exists = scope:berater_gesetz_armee_ziel
+				scope:berater_gesetz_armee_ziel = { is_reasonable_law_for_petition = yes }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_umstritten
+			trigger = {
+				exists = scope:berater_gesetz_armee_ziel
+				scope:berater_gesetz_armee_ziel = { is_reasonable_law_for_petition = no }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_vielvoelker
+			trigger = {
+				exists = scope:berater_gesetz_vielvoelker_ziel
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_unterstuetzt
+			trigger = {
+				exists = scope:berater_gesetz_vielvoelker_ziel
+				scope:berater_gesetz_vielvoelker_ziel = { is_reasonable_law_for_petition = yes }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_umstritten
+			trigger = {
+				exists = scope:berater_gesetz_vielvoelker_ziel
+				scope:berater_gesetz_vielvoelker_ziel = { is_reasonable_law_for_petition = no }
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_kopf_regierung
+			trigger = {
+				exists = scope:berater_gesetz_reg_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_regierung_1
+			trigger = {
+				exists = scope:berater_gesetz_reg_1
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_regierung_2
+			trigger = {
+				exists = scope:berater_gesetz_reg_2
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_regierung_3
+			trigger = {
+				exists = scope:berater_gesetz_reg_3
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_nichts
+			trigger = {
+				NOR = {
+					exists = scope:berater_gesetz_leibeigenschaft_ziel
+					exists = scope:berater_gesetz_wirtschaft_ziel
+					exists = scope:berater_gesetz_beamte_ziel
+					exists = scope:berater_gesetz_handel_ziel
+					exists = scope:berater_gesetz_schulen_ziel
+					exists = scope:berater_gesetz_landsteuer_ziel
+					exists = scope:berater_gesetz_verbrauchsteuer_ziel
+					exists = scope:berater_gesetz_staatsbuergerschaft_ziel
+					exists = scope:berater_gesetz_polizei_ziel
+					exists = scope:berater_gesetz_arbeiterrechte_ziel
+					exists = scope:berater_gesetz_sozialhilfe_ziel
+					exists = scope:berater_gesetz_oeffentliche_schulen_ziel
+					exists = scope:berater_gesetz_kinderarbeit_ziel
+					exists = scope:berater_gesetz_gesundheit_ziel
+					exists = scope:berater_gesetz_armee_ziel
+					exists = scope:berater_gesetz_vielvoelker_ziel
+					exists = scope:berater_gesetz_reg_1
+				}
+			}
+		}
+		triggered_desc = {
+			desc = berater_gesetzplan_warten
+			trigger = {
+				exists = scope:berater_gesetz_aktuell
+				NOR = {
+					exists = scope:berater_gesetz_leibeigenschaft_ziel
+					exists = scope:berater_gesetz_wirtschaft_ziel
+					exists = scope:berater_gesetz_beamte_ziel
+					exists = scope:berater_gesetz_handel_ziel
+					exists = scope:berater_gesetz_schulen_ziel
+					exists = scope:berater_gesetz_landsteuer_ziel
+					exists = scope:berater_gesetz_verbrauchsteuer_ziel
+					exists = scope:berater_gesetz_staatsbuergerschaft_ziel
+					exists = scope:berater_gesetz_polizei_ziel
+					exists = scope:berater_gesetz_arbeiterrechte_ziel
+					exists = scope:berater_gesetz_sozialhilfe_ziel
+					exists = scope:berater_gesetz_oeffentliche_schulen_ziel
+					exists = scope:berater_gesetz_kinderarbeit_ziel
+					exists = scope:berater_gesetz_gesundheit_ziel
+					exists = scope:berater_gesetz_armee_ziel
+					exists = scope:berater_gesetz_vielvoelker_ziel
+					exists = scope:berater_gesetz_reg_1
+				}
+			}
+		}
+	}
+	flavor = berater.4.f
+	event_image = {
+		video = "asia_politician_parliament_motion"
+	}
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+
+	trigger = {
+		is_player = yes
+	}
+
+	immediate = {
+		set_local_variable = {
+			name = berater_anzahl
+			value = 0
+		}
+		if = {
+			limit = { enacting_any_law = yes }
+			currently_enacting_law = {
+				save_scope_as = berater_gesetz_aktuell
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 4
+				berater_gesetz_leibeigenschaft = yes
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_leibeigenschaft_ziel }
+					any_law = {
+						type = law_type:law_tenant_farmers
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_tenant_farmers }
+					save_scope_as = berater_gesetz_leibeigenschaft_ziel
+				}
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_leibeigenschaft_ziel }
+					any_law = {
+						type = law_type:law_commercialized_agriculture
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_commercialized_agriculture }
+					save_scope_as = berater_gesetz_leibeigenschaft_ziel
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 4
+				berater_gesetz_wirtschaft = yes
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_wirtschaft_ziel }
+					any_law = {
+						type = law_type:law_interventionism
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_interventionism }
+					save_scope_as = berater_gesetz_wirtschaft_ziel
+				}
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_wirtschaft_ziel }
+					any_law = {
+						type = law_type:law_laissez_faire
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_laissez_faire }
+					save_scope_as = berater_gesetz_wirtschaft_ziel
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 4
+				berater_gesetz_beamte = yes
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_beamte_ziel }
+					any_law = {
+						type = law_type:law_appointed_bureaucrats
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_appointed_bureaucrats }
+					save_scope_as = berater_gesetz_beamte_ziel
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 4
+				berater_gesetz_handel = yes
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_handel_ziel }
+					any_law = {
+						type = law_type:law_mercantilism
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_mercantilism }
+					save_scope_as = berater_gesetz_handel_ziel
+				}
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_handel_ziel }
+					any_law = {
+						type = law_type:law_protectionism
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_protectionism }
+					save_scope_as = berater_gesetz_handel_ziel
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 4
+				berater_gesetz_schulen = yes
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_schulen_ziel }
+					any_law = {
+						type = law_type:law_religious_schools
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_religious_schools }
+					save_scope_as = berater_gesetz_schulen_ziel
+				}
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_schulen_ziel }
+					any_law = {
+						type = law_type:law_private_schools
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_private_schools }
+					save_scope_as = berater_gesetz_schulen_ziel
+				}
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_schulen_ziel }
+					any_law = {
+						type = law_type:law_public_schools
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_public_schools }
+					save_scope_as = berater_gesetz_schulen_ziel
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 4
+				berater_gesetz_landsteuer = yes
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_landsteuer_ziel }
+					any_law = {
+						type = law_type:law_per_capita_based_taxation
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_per_capita_based_taxation }
+					save_scope_as = berater_gesetz_landsteuer_ziel
+				}
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_landsteuer_ziel }
+					any_law = {
+						type = law_type:law_proportional_taxation
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_proportional_taxation }
+					save_scope_as = berater_gesetz_landsteuer_ziel
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 4
+				berater_gesetz_verbrauchsteuer = yes
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_verbrauchsteuer_ziel }
+					any_law = {
+						type = law_type:law_per_capita_based_taxation
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_per_capita_based_taxation }
+					save_scope_as = berater_gesetz_verbrauchsteuer_ziel
+				}
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_verbrauchsteuer_ziel }
+					any_law = {
+						type = law_type:law_proportional_taxation
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_proportional_taxation }
+					save_scope_as = berater_gesetz_verbrauchsteuer_ziel
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 4
+				berater_gesetz_staatsbuergerschaft = yes
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_staatsbuergerschaft_ziel }
+					any_law = {
+						type = law_type:law_racial_segregation
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_racial_segregation }
+					save_scope_as = berater_gesetz_staatsbuergerschaft_ziel
+				}
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_staatsbuergerschaft_ziel }
+					any_law = {
+						type = law_type:law_cultural_exclusion
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_cultural_exclusion }
+					save_scope_as = berater_gesetz_staatsbuergerschaft_ziel
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 4
+				berater_gesetz_polizei = yes
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_polizei_ziel }
+					any_law = {
+						type = law_type:law_local_police
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_local_police }
+					save_scope_as = berater_gesetz_polizei_ziel
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 4
+				berater_gesetz_arbeiterrechte = yes
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_arbeiterrechte_ziel }
+					any_law = {
+						type = law_type:law_regulatory_bodies
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_regulatory_bodies }
+					save_scope_as = berater_gesetz_arbeiterrechte_ziel
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 4
+				berater_gesetz_sozialhilfe = yes
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_sozialhilfe_ziel }
+					any_law = {
+						type = law_type:law_poor_laws
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_poor_laws }
+					save_scope_as = berater_gesetz_sozialhilfe_ziel
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 4
+				berater_gesetz_oeffentliche_schulen = yes
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_oeffentliche_schulen_ziel }
+					any_law = {
+						type = law_type:law_public_schools
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_public_schools }
+					save_scope_as = berater_gesetz_oeffentliche_schulen_ziel
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 4
+				berater_gesetz_kinderarbeit = yes
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_kinderarbeit_ziel }
+					any_law = {
+						type = law_type:law_restricted_child_labor
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_restricted_child_labor }
+					save_scope_as = berater_gesetz_kinderarbeit_ziel
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 4
+				berater_gesetz_gesundheit = yes
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_gesundheit_ziel }
+					any_law = {
+						type = law_type:law_charitable_health_system
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_charitable_health_system }
+					save_scope_as = berater_gesetz_gesundheit_ziel
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 4
+				berater_gesetz_armee = yes
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_armee_ziel }
+					any_law = {
+						type = law_type:law_professional_army
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_professional_army }
+					save_scope_as = berater_gesetz_armee_ziel
+				}
+			}
+		}
+		if = {
+			limit = {
+				local_var:berater_anzahl < 4
+				berater_gesetz_vielvoelker = yes
+			}
+			change_local_variable = {
+				name = berater_anzahl
+				add = 1
+			}
+			if = {
+				limit = {
+					NOT = { exists = scope:berater_gesetz_vielvoelker_ziel }
+					any_law = {
+						type = law_type:law_multicultural
+						can_be_enacted = yes
+					}
+				}
+				random_law = {
+					limit = { type = law_type:law_multicultural }
+					save_scope_as = berater_gesetz_vielvoelker_ziel
+				}
+			}
+		}
+		random_law = {
+			limit = {
+				berater_gesetz_unterstuetzt = yes
+				trigger_if = {
+					limit = { exists = scope:berater_gesetz_leibeigenschaft_ziel }
+					NOT = { this = scope:berater_gesetz_leibeigenschaft_ziel }
+				}
+				trigger_if = {
+					limit = { exists = scope:berater_gesetz_wirtschaft_ziel }
+					NOT = { this = scope:berater_gesetz_wirtschaft_ziel }
+				}
+				trigger_if = {
+					limit = { exists = scope:berater_gesetz_beamte_ziel }
+					NOT = { this = scope:berater_gesetz_beamte_ziel }
+				}
+				trigger_if = {
+					limit = { exists = scope:berater_gesetz_handel_ziel }
+					NOT = { this = scope:berater_gesetz_handel_ziel }
+				}
+				trigger_if = {
+					limit = { exists = scope:berater_gesetz_schulen_ziel }
+					NOT = { this = scope:berater_gesetz_schulen_ziel }
+				}
+				trigger_if = {
+					limit = { exists = scope:berater_gesetz_landsteuer_ziel }
+					NOT = { this = scope:berater_gesetz_landsteuer_ziel }
+				}
+				trigger_if = {
+					limit = { exists = scope:berater_gesetz_verbrauchsteuer_ziel }
+					NOT = { this = scope:berater_gesetz_verbrauchsteuer_ziel }
+				}
+				trigger_if = {
+					limit = { exists = scope:berater_gesetz_staatsbuergerschaft_ziel }
+					NOT = { this = scope:berater_gesetz_staatsbuergerschaft_ziel }
+				}
+				trigger_if = {
+					limit = { exists = scope:berater_gesetz_polizei_ziel }
+					NOT = { this = scope:berater_gesetz_polizei_ziel }
+				}
+				trigger_if = {
+					limit = { exists = scope:berater_gesetz_arbeiterrechte_ziel }
+					NOT = { this = scope:berater_gesetz_arbeiterrechte_ziel }
+				}
+				trigger_if = {
+					limit = { exists = scope:berater_gesetz_sozialhilfe_ziel }
+					NOT = { this = scope:berater_gesetz_sozialhilfe_ziel }
+				}
+				trigger_if = {
+					limit = { exists = scope:berater_gesetz_oeffentliche_schulen_ziel }
+					NOT = { this = scope:berater_gesetz_oeffentliche_schulen_ziel }
+				}
+				trigger_if = {
+					limit = { exists = scope:berater_gesetz_kinderarbeit_ziel }
+					NOT = { this = scope:berater_gesetz_kinderarbeit_ziel }
+				}
+				trigger_if = {
+					limit = { exists = scope:berater_gesetz_gesundheit_ziel }
+					NOT = { this = scope:berater_gesetz_gesundheit_ziel }
+				}
+				trigger_if = {
+					limit = { exists = scope:berater_gesetz_armee_ziel }
+					NOT = { this = scope:berater_gesetz_armee_ziel }
+				}
+				trigger_if = {
+					limit = { exists = scope:berater_gesetz_vielvoelker_ziel }
+					NOT = { this = scope:berater_gesetz_vielvoelker_ziel }
+				}
+			}
+			save_scope_as = berater_gesetz_reg_1
+		}
+		if = {
+			limit = { exists = scope:berater_gesetz_reg_1 }
+			random_law = {
+				limit = {
+					berater_gesetz_unterstuetzt = yes
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_leibeigenschaft_ziel }
+						NOT = { this = scope:berater_gesetz_leibeigenschaft_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_wirtschaft_ziel }
+						NOT = { this = scope:berater_gesetz_wirtschaft_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_beamte_ziel }
+						NOT = { this = scope:berater_gesetz_beamte_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_handel_ziel }
+						NOT = { this = scope:berater_gesetz_handel_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_schulen_ziel }
+						NOT = { this = scope:berater_gesetz_schulen_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_landsteuer_ziel }
+						NOT = { this = scope:berater_gesetz_landsteuer_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_verbrauchsteuer_ziel }
+						NOT = { this = scope:berater_gesetz_verbrauchsteuer_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_staatsbuergerschaft_ziel }
+						NOT = { this = scope:berater_gesetz_staatsbuergerschaft_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_polizei_ziel }
+						NOT = { this = scope:berater_gesetz_polizei_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_arbeiterrechte_ziel }
+						NOT = { this = scope:berater_gesetz_arbeiterrechte_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_sozialhilfe_ziel }
+						NOT = { this = scope:berater_gesetz_sozialhilfe_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_oeffentliche_schulen_ziel }
+						NOT = { this = scope:berater_gesetz_oeffentliche_schulen_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_kinderarbeit_ziel }
+						NOT = { this = scope:berater_gesetz_kinderarbeit_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_gesundheit_ziel }
+						NOT = { this = scope:berater_gesetz_gesundheit_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_armee_ziel }
+						NOT = { this = scope:berater_gesetz_armee_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_vielvoelker_ziel }
+						NOT = { this = scope:berater_gesetz_vielvoelker_ziel }
+					}
+					NOT = { this = scope:berater_gesetz_reg_1 }
+				}
+				save_scope_as = berater_gesetz_reg_2
+			}
+		}
+		if = {
+			limit = { exists = scope:berater_gesetz_reg_2 }
+			random_law = {
+				limit = {
+					berater_gesetz_unterstuetzt = yes
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_leibeigenschaft_ziel }
+						NOT = { this = scope:berater_gesetz_leibeigenschaft_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_wirtschaft_ziel }
+						NOT = { this = scope:berater_gesetz_wirtschaft_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_beamte_ziel }
+						NOT = { this = scope:berater_gesetz_beamte_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_handel_ziel }
+						NOT = { this = scope:berater_gesetz_handel_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_schulen_ziel }
+						NOT = { this = scope:berater_gesetz_schulen_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_landsteuer_ziel }
+						NOT = { this = scope:berater_gesetz_landsteuer_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_verbrauchsteuer_ziel }
+						NOT = { this = scope:berater_gesetz_verbrauchsteuer_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_staatsbuergerschaft_ziel }
+						NOT = { this = scope:berater_gesetz_staatsbuergerschaft_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_polizei_ziel }
+						NOT = { this = scope:berater_gesetz_polizei_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_arbeiterrechte_ziel }
+						NOT = { this = scope:berater_gesetz_arbeiterrechte_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_sozialhilfe_ziel }
+						NOT = { this = scope:berater_gesetz_sozialhilfe_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_oeffentliche_schulen_ziel }
+						NOT = { this = scope:berater_gesetz_oeffentliche_schulen_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_kinderarbeit_ziel }
+						NOT = { this = scope:berater_gesetz_kinderarbeit_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_gesundheit_ziel }
+						NOT = { this = scope:berater_gesetz_gesundheit_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_armee_ziel }
+						NOT = { this = scope:berater_gesetz_armee_ziel }
+					}
+					trigger_if = {
+						limit = { exists = scope:berater_gesetz_vielvoelker_ziel }
+						NOT = { this = scope:berater_gesetz_vielvoelker_ziel }
+					}
+					NOT = { this = scope:berater_gesetz_reg_1 }
+					NOT = { this = scope:berater_gesetz_reg_2 }
+				}
+				save_scope_as = berater_gesetz_reg_3
+			}
+		}
+	}
+
+	option = {
+		name = berater.4.a
+		default_option = yes
+	}
+	option = {
+		name = berater_zeige_bauplan
+		trigger_event = { id = berater.3 popup = yes }
+	}
+	option = {
+		name = berater_zeige_lagebericht
+		trigger_event = { id = berater.1 popup = yes }
 	}
 }

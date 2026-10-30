@@ -27,7 +27,7 @@ berater_monatlich = {
 	}
 }
 
-# Jahresbericht
+# Jährlicher Lagebericht
 berater_jaehrlich = {
 	trigger = {
 		is_player = yes

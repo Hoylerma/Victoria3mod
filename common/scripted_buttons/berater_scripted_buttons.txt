@@ -15,6 +15,32 @@ berater_knopf_bericht = {
 	}
 }
 
+berater_knopf_bauplan = {
+	name = berater_knopf_bauplan
+	desc = berater_knopf_bauplan_desc
+	visible = { always = yes }
+	possible = { always = yes }
+	effect = {
+		trigger_event = { id = berater.3 popup = yes }
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
+berater_knopf_gesetzesplan = {
+	name = berater_knopf_gesetzesplan
+	desc = berater_knopf_gesetzesplan_desc
+	visible = { always = yes }
+	possible = { always = yes }
+	effect = {
+		trigger_event = { id = berater.4 popup = yes }
+	}
+	ai_chance = {
+		value = 0
+	}
+}
+
 berater_knopf_jahresbericht = {
 	name = {
 		first_valid = {

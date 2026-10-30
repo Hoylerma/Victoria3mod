@@ -230,3 +230,258 @@ berater_hat_problem_tipp = {
 		berater_problem_gesetze = yes
 	}
 }
+
+# Staats-Scope: eigener, eingegliederter Staat, in dem der Bauplan etwas vorschlagen darf
+berater_bauort_geeignet = {
+	is_incorporated = yes
+}
+
+# Gesetz-Scope: kann jetzt eingebracht werden und keine Regierungspartei ist dagegen
+berater_gesetz_unterstuetzt = {
+	can_be_enacted = yes
+	is_reasonable_law_for_petition = yes
+}
+
+# Gesetzesempfehlung „leibeigenschaft“ (Länder-Scope)
+berater_gesetz_leibeigenschaft = {
+	OR = {
+		has_law_or_variant = law_type:law_serfdom
+	}
+	any_law = {
+		can_be_enacted = yes
+		OR = {
+			type = law_type:law_tenant_farmers
+			type = law_type:law_commercialized_agriculture
+		}
+	}
+}
+
+# Gesetzesempfehlung „wirtschaft“ (Länder-Scope)
+berater_gesetz_wirtschaft = {
+	OR = {
+		has_law_or_variant = law_type:law_traditionalism
+		has_law_or_variant = law_type:law_agrarianism
+	}
+	any_law = {
+		can_be_enacted = yes
+		OR = {
+			type = law_type:law_interventionism
+			type = law_type:law_laissez_faire
+		}
+	}
+}
+
+# Gesetzesempfehlung „beamte“ (Länder-Scope)
+berater_gesetz_beamte = {
+	OR = {
+		has_law_or_variant = law_type:law_hereditary_bureaucrats
+	}
+	any_law = {
+		can_be_enacted = yes
+		OR = {
+			type = law_type:law_appointed_bureaucrats
+		}
+	}
+}
+
+# Gesetzesempfehlung „handel“ (Länder-Scope)
+berater_gesetz_handel = {
+	OR = {
+		has_law_or_variant = law_type:law_isolationism
+	}
+	any_law = {
+		can_be_enacted = yes
+		OR = {
+			type = law_type:law_mercantilism
+			type = law_type:law_protectionism
+		}
+	}
+}
+
+# Gesetzesempfehlung „schulen“ (Länder-Scope)
+berater_gesetz_schulen = {
+	OR = {
+		has_law_or_variant = law_type:law_no_schools
+	}
+	any_law = {
+		can_be_enacted = yes
+		OR = {
+			type = law_type:law_religious_schools
+			type = law_type:law_private_schools
+			type = law_type:law_public_schools
+		}
+	}
+}
+
+# Gesetzesempfehlung „landsteuer“ (Länder-Scope)
+berater_gesetz_landsteuer = {
+	OR = {
+		has_law_or_variant = law_type:law_land_based_taxation
+	}
+	any_law = {
+		can_be_enacted = yes
+		OR = {
+			type = law_type:law_per_capita_based_taxation
+			type = law_type:law_proportional_taxation
+		}
+	}
+}
+
+# Gesetzesempfehlung „verbrauchsteuer“ (Länder-Scope)
+berater_gesetz_verbrauchsteuer = {
+	OR = {
+		has_law_or_variant = law_type:law_consumption_based_taxation
+	}
+	any_law = {
+		can_be_enacted = yes
+		OR = {
+			type = law_type:law_per_capita_based_taxation
+			type = law_type:law_proportional_taxation
+		}
+	}
+	OR = {
+		berater_problem_defizit = yes
+		berater_problem_schulden_hoch = yes
+		berater_problem_schulden_kritisch = yes
+	}
+}
+
+# Gesetzesempfehlung „staatsbuergerschaft“ (Länder-Scope)
+berater_gesetz_staatsbuergerschaft = {
+	OR = {
+		has_law_or_variant = law_type:law_ethnostate
+		has_law_or_variant = law_type:law_national_supremacy
+	}
+	any_law = {
+		can_be_enacted = yes
+		OR = {
+			type = law_type:law_racial_segregation
+			type = law_type:law_cultural_exclusion
+		}
+	}
+	OR = {
+		berater_problem_abspaltung = yes
+		berater_problem_unruhe = yes
+		berater_problem_radikale = yes
+	}
+}
+
+# Gesetzesempfehlung „polizei“ (Länder-Scope)
+berater_gesetz_polizei = {
+	OR = {
+		has_law_or_variant = law_type:law_no_police
+	}
+	any_law = {
+		can_be_enacted = yes
+		OR = {
+			type = law_type:law_local_police
+		}
+	}
+	OR = {
+		berater_problem_unruhe = yes
+		berater_problem_radikale = yes
+	}
+}
+
+# Gesetzesempfehlung „arbeiterrechte“ (Länder-Scope)
+berater_gesetz_arbeiterrechte = {
+	OR = {
+		has_law_or_variant = law_type:law_no_workers_rights
+	}
+	any_law = {
+		can_be_enacted = yes
+		OR = {
+			type = law_type:law_regulatory_bodies
+		}
+	}
+	OR = {
+		berater_problem_radikale = yes
+		berater_problem_lebensstandard = yes
+	}
+}
+
+# Gesetzesempfehlung „sozialhilfe“ (Länder-Scope)
+berater_gesetz_sozialhilfe = {
+	OR = {
+		has_law_or_variant = law_type:law_no_social_security
+	}
+	any_law = {
+		can_be_enacted = yes
+		OR = {
+			type = law_type:law_poor_laws
+		}
+	}
+	berater_problem_lebensstandard = yes
+	scaled_debt < 0.3
+}
+
+# Gesetzesempfehlung „oeffentliche_schulen“ (Länder-Scope)
+berater_gesetz_oeffentliche_schulen = {
+	OR = {
+		has_law_or_variant = law_type:law_religious_schools
+		has_law_or_variant = law_type:law_private_schools
+	}
+	any_law = {
+		can_be_enacted = yes
+		OR = {
+			type = law_type:law_public_schools
+		}
+	}
+	literacy_rate < 0.6
+	scaled_debt < 0.3
+}
+
+# Gesetzesempfehlung „kinderarbeit“ (Länder-Scope)
+berater_gesetz_kinderarbeit = {
+	OR = {
+		has_law_or_variant = law_type:law_child_labor_allowed
+	}
+	any_law = {
+		can_be_enacted = yes
+		OR = {
+			type = law_type:law_restricted_child_labor
+		}
+	}
+	literacy_rate < 0.5
+}
+
+# Gesetzesempfehlung „gesundheit“ (Länder-Scope)
+berater_gesetz_gesundheit = {
+	OR = {
+		has_law_or_variant = law_type:law_no_health_system
+	}
+	any_law = {
+		can_be_enacted = yes
+		OR = {
+			type = law_type:law_charitable_health_system
+		}
+	}
+}
+
+# Gesetzesempfehlung „armee“ (Länder-Scope)
+berater_gesetz_armee = {
+	OR = {
+		has_law_or_variant = law_type:law_peasant_levies
+	}
+	any_law = {
+		can_be_enacted = yes
+		OR = {
+			type = law_type:law_professional_army
+		}
+	}
+}
+
+# Gesetzesempfehlung „vielvoelker“ (Länder-Scope)
+berater_gesetz_vielvoelker = {
+	OR = {
+		has_law_or_variant = law_type:law_racial_segregation
+		has_law_or_variant = law_type:law_cultural_exclusion
+	}
+	any_law = {
+		can_be_enacted = yes
+		OR = {
+			type = law_type:law_multicultural
+		}
+	}
+	berater_problem_abspaltung = yes
+}

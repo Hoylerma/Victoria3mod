@@ -9,6 +9,9 @@ Jeder Eintrag beschreibt eine Prüfung im Länder-Scope (ROOT = Spielerland):
                  schon eine Warnung dafür zeigt).
     bedingung    Victoria-3-Trigger (Länder-Scope); wahr = das Problem liegt vor
     de / en      Titel, Befund und Ratschlag
+    detail       optional: benennt im Lagebericht den betroffenen Staat oder die Interessengruppe
+                 (scope: gespeicherter Scope, typ: "state" oder "ig", effekt: wählt ihn aus,
+                 de/en: Text mit {NAME})
 
 Neue Ratschläge hier eintragen und danach `python3 werkzeuge/erzeuge_mod.py` ausführen.
 """
@@ -219,6 +222,23 @@ RATSCHLAEGE = [
                 turmoil >= 0.25
             }
         """,
+        "detail": {
+            "scope": "berater_ort_unruhe",
+            "typ": "state",
+            "effekt": """
+                ordered_scope_state = {
+                    limit = {
+                        is_incorporated = yes
+                        state_population >= 100000
+                    }
+                    order_by = turmoil
+                    max = 1
+                    save_scope_as = berater_ort_unruhe
+                }
+            """,
+            "de": "Am stärksten betroffen: {NAME}.",
+            "en": "Most affected: {NAME}.",
+        },
         "de": (
             "Unruhe in deinen Staaten",
             "In mindestens einem deiner Staaten herrscht starke Unruhe. Das senkt die Produktivität und kann zu Aufständen führen.",
@@ -260,6 +280,22 @@ RATSCHLAEGE = [
                 ig_approval <= -10
             }
         """,
+        "detail": {
+            "scope": "berater_ig_wuetend",
+            "typ": "ig",
+            "effekt": """
+                ordered_interest_group = {
+                    limit = {
+                        is_powerful = yes
+                    }
+                    order_by = berater_ig_unmut
+                    max = 1
+                    save_scope_as = berater_ig_wuetend
+                }
+            """,
+            "de": "Am wütendsten ist {NAME}.",
+            "en": "The angriest is {NAME}.",
+        },
         "de": (
             "Mächtige Interessengruppe wütend",
             "Eine einflussreiche Interessengruppe ist wütend auf deine Regierung. Sie kann radikal werden und revolutionäre Bewegungen unterstützen.",
@@ -282,6 +318,23 @@ RATSCHLAEGE = [
                 state_unemployment_rate > 0.15
             }
         """,
+        "detail": {
+            "scope": "berater_ort_arbeitslos",
+            "typ": "state",
+            "effekt": """
+                ordered_scope_state = {
+                    limit = {
+                        is_incorporated = yes
+                        state_population >= 250000
+                    }
+                    order_by = berater_arbeitslose
+                    max = 1
+                    save_scope_as = berater_ort_arbeitslos
+                }
+            """,
+            "de": "Die meisten Arbeitslosen gibt es in {NAME}. Der Bauplan bevorzugt solche Staaten.",
+            "en": "The most unemployed live in {NAME}. The construction plan favors such states.",
+        },
         "de": (
             "Hohe Arbeitslosigkeit",
             "In mindestens einem größeren Staat sind über 15 % der Arbeitskräfte ohne Arbeit. Arbeitslose verarmen und werden radikal.",
@@ -323,12 +376,12 @@ RATSCHLAEGE = [
         "de": (
             "Güterknappheit",
             "In deinem Markt fehlen Güter, die Betriebe als Vorprodukte brauchen. Das senkt ihre Produktivität und treibt die Preise.",
-            "Öffne die Marktansicht und sortiere nach Knappheit. Baue Produktionsstätten für die fehlenden Güter oder sichere Importe über Handelsrouten.",
+            "Der Bauplan im Journal nennt dir, was du wo bauen solltest. Alternativ helfen Importe über Handelsrouten.",
         ),
         "en": (
             "Goods Shortages",
             "Your market lacks goods that buildings need as inputs. This lowers their productivity and drives prices up.",
-            "Open the market view and sort by shortage. Build production for the missing goods or secure imports through trade routes.",
+            "The construction plan in the journal tells you what to build where. Imports through trade routes also help.",
         ),
     },
     {
@@ -519,12 +572,12 @@ RATSCHLAEGE = [
         "de": (
             "Industriegüter teuer",
             "Mindestens ein wichtiges Industriegut (Kohle, Eisen, Holz, Werkzeuge oder Stahl) kostet über 25 % mehr als der Grundpreis. Das bremst die ganze Industrie.",
-            "Baue Minen, Holzfällerlager, Werkzeug- oder Stahlwerke für das teure Gut. Billige Grundstoffe machen alle weiterverarbeitenden Betriebe profitabler.",
+            "Öffne im Journal den Bauplan: Der Berater nennt dir für jedes teure Gut das passende Gebäude und den besten Staat dafür.",
         ),
         "en": (
             "Industrial Goods Expensive",
             "At least one key industrial good (coal, iron, wood, tools or steel) costs more than 25 % above its base price. This holds back your whole industry.",
-            "Build mines, logging camps, tooling workshops or steel mills for the expensive good. Cheap raw materials make every downstream building more profitable.",
+            "Open the construction plan in the journal: your advisor names the right building and the best state for each expensive good.",
         ),
     },
     {
@@ -538,12 +591,12 @@ RATSCHLAEGE = [
         "de": (
             "Kein Gesetz in Arbeit",
             "Derzeit bringst du kein Gesetz auf den Weg. Reformen gehören zu den stärksten Hebeln für Wirtschaft und Stabilität.",
-            "Prüfe in der Politikansicht, welche Gesetze deine Regierungsparteien unterstützen. Wirtschaftlich besonders wirksam sind Steuer-, Handels-, Bildungs- und Arbeitsgesetze.",
+            "Öffne im Journal den Gesetzesplan: Der Berater empfiehlt dir konkrete Gesetze und sagt, ob deine Regierung sie mitträgt.",
         ),
         "en": (
             "No Law Being Enacted",
             "You are not enacting any law right now. Reforms are among the strongest levers for the economy and stability.",
-            "Check in the politics view which laws your governing parties support. Tax, trade, education and labor laws are especially effective economically.",
+            "Open the law plan in the journal: your advisor recommends specific laws and tells you whether your government backs them.",
         ),
     },
 ]

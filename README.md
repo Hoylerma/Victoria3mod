@@ -8,10 +8,25 @@ Eine Mod für Victoria 3, die dein Land während des Spiels laufend analysiert u
 |---|---|---|
 | **Live-Warnungen** | sofort, solange ein Problem besteht | Warnleiste oben (rot: akut, gelb: Warnung, grün: Tipps, zusammengefasst) |
 | **Journal „Der Berater“** | immer aktiv, aktualisiert sich laufend | Journal, Gruppe „Berater“: Liste aller aktuellen Befunde |
-| **Bericht** | auf Knopfdruck im Journal und einmal im Jahr | Ereignisfenster mit jedem Befund und einem konkreten Ratschlag |
+| **Lagebericht** | auf Knopfdruck im Journal und einmal im Jahr | jeder Befund mit Ratschlag, dazu der am stärksten betroffene Staat bzw. die wütendste Interessengruppe |
+| **Bauplan** | auf Knopfdruck im Journal | welches Gebäude in welchem Staat gebaut werden sollte |
+| **Gesetzesplan** | auf Knopfdruck im Journal | welche Gesetze als Nächstes, warum, und ob die Regierung sie mitträgt |
 | **Krisenwarnung** | monatliche Prüfung; höchstens alle 6 Monate | Popup, wenn ein akutes Problem vorliegt |
 
-Im Journal lassen sich Jahresbericht und Krisenwarnungen ein- und ausschalten. Einzelne Live-Warnungen schaltest du in den Warnungseinstellungen des Spiels ab (Einträge „Der Berater: …“).
+Im Journal lassen sich Jahresbericht und Krisenwarnungen ein- und ausschalten.
+
+### Bauplan
+
+- **Teure Güter selbst herstellen:** Für bis zu 5 Güter, die im eigenen Markt mindestens 20 % über dem Grundpreis liegen und gebraucht werden, nennt der Berater das passende Gebäude (z. B. Kohlebergwerk, Stahlwerk, Weizenfarm) und den besten eigenen Staat dafür. Bester Staat heißt: Das Gebäude ist dort baubar (Ressourcen, Technologie), und es gibt viele Einwohner und Arbeitslose; Staaten mit überlasteter Infrastruktur zählen nur halb. Ist das Gebäude nirgends möglich, rät er zu Importen.
+- **Infrastruktur:** die zwei Staaten mit der am stärksten überlasteten Infrastruktur, mit Eisenbahn oder Hafen als Empfehlung.
+- **Verwaltung:** bei Bürokratie im Minus eine Regierungsverwaltung im passenden Staat.
+- **Bausektor:** bei langer Bauwarteschlange und gesundem Haushalt ein weiterer Bausektor.
+
+### Gesetzesplan
+
+- **In Arbeit:** das Gesetz, das gerade verabschiedet wird.
+- **Empfehlungen (bis zu 4):** zum Beispiel Pächter statt Leibeigenschaft, Interventionismus statt Traditionalismus, ernannte statt erblicher Beamter, Schulen, Steuerreform; einige nur bei passender Lage (z. B. lockerere Staatsbürgerschaft bei Separatisten oder Unruhe). Nur Gesetze, die du schon einbringen kannst, mit Begründung und dem Hinweis, ob deine Regierung sie mitträgt.
+- **Von der Regierung mitgetragen:** bis zu drei weitere Gesetze, die du jetzt einbringen kannst, ohne dass eine Regierungspartei dagegen ist. Einzelne Live-Warnungen schaltest du in den Warnungseinstellungen des Spiels ab (Einträge „Der Berater: …“).
 
 ## Was der Berater prüft (27 Befunde)
 
@@ -41,6 +56,7 @@ Die Mod wurde gegen die aktuelle Liste der Victoria-3-Trigger (CWTools-Konfigura
 - Datei `error.log` unter `Dokumente\Paradox Interactive\Victoria 3\logs\` nach `berater` durchsuchen.
 - Erscheint das Journal „Der Berater“? Funktionieren die drei Knöpfe?
 - Tauchen Warnungen in der Warnleiste auf (z. B. „Industriegüter teuer“ oder „Steuern senkbar“)?
+- Nennen Bauplan und Gesetzesplan Staaten, Gebäude und Gesetze mit Namen (und nicht leere Stellen)?
 
 Fehlerzeilen aus der `error.log` als Issue melden, dann lassen sie sich gezielt beheben.
 
@@ -56,7 +72,8 @@ common/journal_entries/          Journal „Der Berater“
 common/journal_entry_groups/     Journalgruppe „Berater“
 common/scripted_buttons/         Knöpfe im Journal
 common/on_actions/               monatliche Krisenprüfung, Jahresbericht
-events/berater_events.txt        Bericht (berater.1) und Krisenwarnung (berater.2)
+events/berater_events.txt        Lagebericht (berater.1), Krisenwarnung (berater.2),
+                                 Bauplan (berater.3), Gesetzesplan (berater.4)
 gfx/interface/icons/berater/     Warnsymbole
 localization/                    Deutsch; alle anderen Sprachen auf Englisch
 werkzeuge/                       Generator (Python)
@@ -64,7 +81,7 @@ werkzeuge/                       Generator (Python)
 
 ## Ratschläge ändern oder ergänzen
 
-Alle Prüfungen und Texte stehen an einer Stelle: `werkzeuge/ratschlaege.py`. Danach neu erzeugen:
+Alle Prüfungen und Texte stehen in zwei Tabellen: `werkzeuge/ratschlaege.py` (Befunde für Warnungen, Journal und Lagebericht) und `werkzeuge/plaene.py` (Güter und Gebäude für den Bauplan, Gesetzesempfehlungen). Danach neu erzeugen:
 
 ```bash
 python3 werkzeuge/erzeuge_mod.py

@@ -136,6 +136,8 @@ je_berater = {
 	}
 
 	scripted_button = berater_knopf_bericht
+	scripted_button = berater_knopf_bauplan
+	scripted_button = berater_knopf_gesetzesplan
 	scripted_button = berater_knopf_jahresbericht
 	scripted_button = berater_knopf_krisen
 }
